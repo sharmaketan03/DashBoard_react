@@ -1,12 +1,14 @@
 import React from 'react'
 import { FaLink } from 'react-icons/fa';
-import { FiChevronLeft } from 'react-icons/fi';
+
+import { HiOutlineArrowLeft } from "react-icons/hi";
+import { Link } from "react-router-dom";
 function Clientstest() {
   return (
      <div className="p-6 bg-gray-50 mt-24 min-h-screen text-sm">
       {/* Top Header */}
       <div className="flex items-center gap-2">
-        <FiChevronLeft className="h-6 w-6 text-gray-600" />
+         <Link to="/clients"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
         <h1 className="text-2xl font-semibold">test</h1>
         <select className="border px-2 py-1 rounded">
           <option>Select Site</option>

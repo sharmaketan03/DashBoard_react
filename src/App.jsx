@@ -28,6 +28,7 @@ import Clientstest from "./ClientTest"
 import JobClientAdd from "./JobClientAdd"
 import Google from "./Google"
 import AssetDetails1 from "./AssetDetails1"
+import AssetsCPUComponent from "./AssetsCPUComponent"
 
 
 const router = createBrowserRouter([
@@ -134,6 +135,11 @@ const router = createBrowserRouter([
              {
       path:"/AssetDetails1",
       element:<AssetDetails1/>
+      },
+
+               {
+      path:"/AssetsCPUComponent",
+      element:<AssetsCPUComponent/>
       },
       
     ]

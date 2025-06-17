@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import { IoArrowBack } from "react-icons/io5";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 import { FiEdit2 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import { FiCopy, FiEdit, FiTrash2, FiUser, FiPhone } from "react-icons/fi";
 
 const StrelingInfotech = () => {
@@ -56,7 +57,7 @@ const StrelingInfotech = () => {
       {/* Header Section */}
       <div className="flex items-center gap-3 mb-4">
         <div className="flex items-center gap-2 text-xl font-semibold cursor-pointer">
-          <IoArrowBack className="text-2xl text-gray-700 border-2 rounded-full" />
+           <Link to="/clients"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
           <span className="text-3xl text-gray-800 font-bold">
             Sterling Infotech
           </span>

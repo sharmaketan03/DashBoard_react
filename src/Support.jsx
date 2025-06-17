@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { GoPlus } from "react-icons/go";
 import { FaEye } from "react-icons/fa";
@@ -34,14 +34,11 @@ function Support() {
     setPortalOpen(false);
   };
 
-  
-
   return (
-    <div className=" mt-[50px] pt-[50px] w-[92%] mx-12">
+    <div className=" mt-[50px] pt-[50px] w-[97%] ">
       <div className="flex item-center justify-between">
         <h1 className="text-2xl font-bold mb-6">Support Tickets</h1>
 
-       
         <div className="flex gap-4 mb-6">
           <button
             className="flex items-center gap-2 px-2 py-2 border rounded-lg text-black-600 hover:bg-blue-100"
@@ -65,7 +62,7 @@ function Support() {
                     className="text-gray-900 text-[30px] hover:text-gray-900 text-lg"
                     onClick={closeModal}
                   >
-                  <RxCross2 />
+                    <RxCross2 />
                   </button>
                 </div>
                 <form>
@@ -140,14 +137,13 @@ function Support() {
 
           {isClickOpen && (
             <div
-           className="fixed inset-0  backdrop-blur-sm flex justify-center items-center z-50 p-[60px]"
+              className="fixed inset-0  backdrop-blur-sm flex justify-center items-center z-50 p-[60px]"
               onClick={closeclick}
             >
               <div
                 className="bg-white p-6 rounded-lg w-[80%] shadow-lg"
                 onClick={(e) => e.stopPropagation()}
               >
-         
                 <div className="flex justify-between items-center border-b pb-2 mb-5">
                   <h2 className="text-xl font-bold">Add Asset</h2>
                   <button
@@ -158,9 +154,7 @@ function Support() {
                   </button>
                 </div>
 
-              
                 <form>
-                  
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none">
                       <option>Select Client</option>
@@ -174,7 +168,6 @@ function Support() {
                     </select>
                   </div>
 
-               
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <input
                       type="text"
@@ -188,7 +181,6 @@ function Support() {
                     />
                   </div>
 
-               
                   <div className="grid grid-cols-5 gap-4 mb-4">
                     <div className="flex items-center col-span-1">
                       <input
@@ -214,7 +206,6 @@ function Support() {
                     </button>
                   </div>
 
-                 
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <input
                       type="text"
@@ -228,7 +219,6 @@ function Support() {
                     />
                   </div>
 
-              
                   <div className="flex gap-4 mt-4">
                     <button
                       type="submit"
@@ -251,7 +241,6 @@ function Support() {
 
           <button
             className="flex items-center gap-2 px-3 py-2 border rounded-lg text-blue-600 hover:bg-blue-100 backdrop-blur-sm bg-white/30"
-
             onClick={openShow}
           >
             <GoPlus /> Add Ticket
@@ -272,11 +261,10 @@ function Support() {
                     className="text-gray-900 text-[30px] hover:text-gray-900"
                     onClick={closeShow}
                   >
-                     <RxCross2 />
+                    <RxCross2 />
                   </button>
                 </div>
                 <form>
-                 
                   <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
                       Client <span className="text-blue-500">(required)</span>
@@ -305,7 +293,6 @@ function Support() {
                     </div>
                   </div>
 
-            
                   <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
                       Select Requester{" "}
@@ -319,7 +306,6 @@ function Support() {
                     </button>
                   </div>
 
-                
                   <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
                       Description of Issue
@@ -331,12 +317,8 @@ function Support() {
                     ></textarea>
                   </div>
 
-              
                   <div className="flex gap-4  mt-6">
-                    <button
-                      type="submit"
-                      np
-                    >
+                    <button type="submit" np>
                       Add Ticket
                     </button>
                     <button
@@ -365,7 +347,6 @@ function Support() {
           </span>
         </div>
 
-     
         <div className="p-4 border bg-white rounded w-[250px] h-[110px] flex justify-between items-center">
           <div>
             <h2 className="text-[13px]">Working</h2>
@@ -466,7 +447,7 @@ function Support() {
               </td>
               <td className="px-4 py-2  gap-2">
                 <button
-                  className="p-1 border rounded hover:bg-gray-100 cursor-pointer"
+                  className="p-[5px] border rounded hover:bg-gray-100 cursor-pointer"
                   onClick={togglePortal}
                 >
                   <LuPencil />
@@ -517,7 +498,7 @@ function Support() {
                                 <p className="text-gray-400 text-sm">-</p>
                               </div>
 
-                              <button className="p-2 bg-gray-100 rounded hover:bg-gray-200">
+                              <button className="p-[5px] border rounded hover:bg-gray-100 cursor-pointer">
                                 <LuPencil className="text-gray-500" />
                               </button>
                             </div>
@@ -599,11 +580,11 @@ function Support() {
                 )}
 
                 <br />
-                <a href="/SupportTicket">
-                  <button className="p-1 border rounded hover:bg-gray-100 mt-[10px] cursor-pointer">
+                <Link to="/SupportTicket">
+                  <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
                     <FiArrowRight />
                   </button>
-                </a>
+                </Link>
               </td>
             </tr>
 
@@ -628,15 +609,17 @@ function Support() {
               </td>
               <td className="px-4 py-2  gap-2">
                 <button
-                  className="p-1 border rounded hover:bg-gray-100 cursor-pointer "
+                  className="p-[5px] border rounded hover:bg-gray-100 cursor-pointer "
                   onClick={togglePortal}
                 >
                   <LuPencil />
                 </button>{" "}
                 <br />
-                <button className="p-1 border rounded  hover:bg-gray-100 mt-[10px] cursor-pointer">
-                  <FiArrowRight />
-                </button>
+                <Link to="/SupportTicket">
+                  <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
+                    <FiArrowRight />
+                  </button>
+                </Link>
               </td>
             </tr>
           </tbody>
@@ -659,15 +642,17 @@ function Support() {
               </td>
               <td className="px-4 py-2  gap-2">
                 <button
-                  className="p-1 border rounded hover:bg-gray-100 cursor-pointer"
+                  className="p-[5px]  border rounded hover:bg-gray-100 cursor-pointer"
                   onClick={togglePortal}
                 >
                   <LuPencil />
                 </button>{" "}
                 <br />
-                <button className="p-1 border rounded  hover:bg-gray-100 mt-[10px] cursor-pointer">
-                  <FiArrowRight />
-                </button>
+                <Link to="/SupportTicket">
+                  <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
+                    <FiArrowRight />
+                  </button>
+                </Link>
               </td>
             </tr>
 
@@ -680,23 +665,25 @@ function Support() {
               <td className="px-4 py-2 p-[20px]">39 Days</td>
               <td className="px-4 py-2 flex gap-2 mt-[5px]"></td>
               <td className="px-4 py-2">
-                <a href="">
-                  <span className="bg-blue-500 text-white px-2 py-1 rounded-[4px] text-sm p-[20px]">
-                    Open
+                <Link to="">
+                  <span className="bg-orange-500 text-white px-2 py-1 rounded-[4px] text-lg]">
+                    On site Technician
                   </span>
-                </a>
+                </Link>
               </td>
               <td className="px-4 py-2  gap-2">
                 <button
-                  className="p-1 border rounded hover:bg-gray-100 cursor-pointer"
+                  className="p-[5px]  border rounded hover:bg-gray-100 cursor-pointer"
                   onClick={togglePortal}
                 >
                   <LuPencil />
                 </button>{" "}
                 <br />
-                <button className="p-1 border rounded  hover:bg-gray-100 mt-[10px] cursor-pointer">
-                  <FiArrowRight />
-                </button>
+                <Link to="/SupportTicket">
+                  <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
+                    <FiArrowRight />
+                  </button>
+                </Link>
               </td>
             </tr>
           </tbody>
@@ -727,23 +714,25 @@ function Support() {
                 </span>
               </td>
               <td className="">
-                <a href="">
-                  <span className="bg-orange-500 text-white px-2 py-1 rounded-[4px] text-lg]">
-                    On site Technician
+                <Link to="">
+                  <span className="bg-yellow-300 text-white px-2 ml-3 py-1 rounded-[4px] text-lg]">
+                   Working
                   </span>
-                </a>
+                </Link>
               </td>
               <td className="px-4 py-2  gap-2">
                 <button
-                  className="p-1 border rounded hover:bg-gray-100 cursor-pointer"
+                  className="p-[5px]  border rounded hover:bg-gray-100 cursor-pointer"
                   onClick={togglePortal}
                 >
                   <LuPencil />
                 </button>
                 <br />
-                <button className="p-1 border rounded  hover:bg-gray-100 mt-[10px] cursor-pointer">
-                  <FiArrowRight />
-                </button>
+                <Link to="/SupportTicket">
+                  <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
+                    <FiArrowRight />
+                  </button>
+                </Link>
               </td>
             </tr>
 
@@ -768,15 +757,17 @@ function Support() {
               </td>
               <td className="px-4 py-2  gap-2">
                 <button
-                  className="p-1 border rounded hover:bg-gray-100 cursor-pointer"
+                  className="p-[5px]  border rounded hover:bg-gray-100 cursor-pointer"
                   onClick={togglePortal}
                 >
                   <LuPencil />
                 </button>
                 <br />
-                <button className="p-1 border rounded  hover:bg-gray-100 mt-[10px] cursor-pointer">
-                  <FiArrowRight />
-                </button>
+                <Link to="/SupportTicket">
+                  <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
+                    <FiArrowRight />
+                  </button>
+                </Link>
               </td>
             </tr>
           </tbody>

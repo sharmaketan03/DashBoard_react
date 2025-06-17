@@ -4,7 +4,7 @@ import { LuEye } from "react-icons/lu";
 const AssetsComponent = () => {
   return (
     <>
-      <div className="mt-[7%] w-[96%] m-auto">
+      <div className="mt-25 w-[97%] mr-10">
         <h1 className="text-2xl font-bold mb-8">Assets</h1>
         <div className="text-[15px]">
           <div className="p-6 bg-white w-[100%] border border-gray-300 rounded-xl shadow-md">
@@ -44,9 +44,11 @@ const AssetsComponent = () => {
                     <td className="px-4 py-3">sterling</td>
                     <td className="px-4 py-3"></td>
                     <td className="px-4 py-3">
+                     <Link to="/AssetsCPUComponent">
                       <button className="flex items-center gap-1 text-gray-900 border border-gray-400 px-3 py-1 rounded hover:bg-gray-100">
                         <LuEye /> View Asset
                       </button>
+                      </Link>
                     </td>
                   </tr>
 

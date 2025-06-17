@@ -1,6 +1,8 @@
 
 import React, { useState } from "react";
 import ResolveTicketModal from "./ResolveTicketModal";
+import { Link } from "react-router-dom";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 
 function DashboardOnsiteTechnincFirst() {
 
@@ -10,7 +12,15 @@ function DashboardOnsiteTechnincFirst() {
      
       <div className="mb-4 flex justify-between items-center">
         <div>
-          <h1 className="text-xl font-bold">Support Ticket #10003</h1>
+          <div className="flex items-center gap-3">
+            <div>
+               <Link to="/"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
+            </div>
+            <div>
+               <h1 className="text-xl font-bold">Support Ticket #10003</h1>
+            </div>
+          </div>
+         
           <p className="text-gray-500 text-xs">
             Created September 24, 2014 - 02:45pm | Claimed by Clark Kelly, Stanley Jr., Ashfield Job <a className="text-blue-500">Edit</a>
           </p>

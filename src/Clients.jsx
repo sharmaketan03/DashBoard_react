@@ -13,7 +13,7 @@ function Clients() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   return (
-    <div className="w-full mx-auto my-6 mt-[95px]">
+    <div className=" mx-auto my-6 mt-25 w-[97%] mr-9">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-2xl font-semibold">Clients</h1>
@@ -126,7 +126,7 @@ function Clients() {
 
             {/* Table Body */}
             <tbody>
-              <tr className="border-t hover:bg-gray-100">
+              <tr className="border-t border-gray-500 hover:bg-gray-100">
                 <td className="px-6 py-3">Google</td>
                 <td className="px-6 py-3">0</td>
                 <td className="px-6 py-3">0</td>
@@ -134,20 +134,20 @@ function Clients() {
                   <div className="flex gap-2">
                     <Link
                       to="/Google"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px]  border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <LuEye />
                     </Link>
                     <Link
                       to="/Google"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <GoPencil />
                     </Link>
                   </div>
                 </td>
               </tr>
-              <tr className="border-t hover:bg-gray-100">
+              <tr className="border-t border-gray-500 hover:bg-gray-100">
                 <td className="px-6 py-3">Job client add</td>
                 <td className="px-6 py-3">1</td>
                 <td className="px-6 py-3">1</td>
@@ -155,20 +155,20 @@ function Clients() {
                   <div className="flex gap-2">
                     <Link
                       to="/JobClientAdd"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <LuEye />
                     </Link>
                     <Link
                       to="/JobClientAdd"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <GoPencil />
                     </Link>
                   </div>
                 </td>
               </tr>
-              <tr className="border-t hover:bg-gray-100">
+              <tr className="border-t border-gray-500 hover:bg-gray-100">
                 <td className="px-6 py-3">Ster</td>
                 <td className="px-6 py-3">0</td>
                 <td className="px-6 py-3">0</td>
@@ -176,20 +176,20 @@ function Clients() {
                   <div className="flex gap-2">
                     <Link
                       to="/SiteOverview"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <LuEye />
                     </Link>
                     <Link
                       to="/SiteOverview"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <GoPencil />
                     </Link>
                   </div>
                 </td>
               </tr>
-              <tr className="border-t hover:bg-gray-100">
+              <tr className="border-t border-gray-500 hover:bg-gray-100">
                 <td className="px-6 py-3">Sterling Infotech</td>
                 <td className="px-6 py-3">3</td>
                 <td className="px-6 py-3">3</td>
@@ -197,20 +197,20 @@ function Clients() {
                   <div className="flex gap-2">
                     <Link
                       to="/StrelingInfotech"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <LuEye />
                     </Link>
                     <Link
                       to="/StrelingInfotech"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <GoPencil />
                     </Link>
                   </div>
                 </td>
               </tr>
-              <tr className="border-t hover:bg-gray-100">
+              <tr className="border-t border-gray-500 hover:bg-gray-100">
                 <td className="px-6 py-3">test</td>
                 <td className="px-6 py-3">0</td>
                 <td className="px-6 py-3">0</td>
@@ -218,13 +218,13 @@ function Clients() {
                   <div className="flex gap-2">
                     <Link
                       to="/Clientstest"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border border-gray-500 rounded hover:bg-gray-100 cursor-pointer"
                     >
                       <LuEye />
                     </Link>
                     <Link
                       to="/Clientstest"
-                      className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
+                      className="p-[5px] border rounded border-gray-500 hover:bg-gray-100 cursor-pointer"
                     >
                       <GoPencil />
                     </Link>
@@ -237,10 +237,10 @@ function Clients() {
 
         {/* Pagination */}
         <div className="flex justify-end gap-4 mt-5 mb-6">
-          <button className="flex items-center gap-2 px-4 py-1 border rounded hover:bg-gray-100 text-sm">
+          <button className="flex items-center border-gray-500 gap-2 px-4 py-1 border rounded hover:bg-gray-100 text-sm">
             <FaLessThan /> Prev
           </button>
-          <button className="flex items-center gap-2 px-4 py-1 border rounded hover:bg-gray-100 text-sm">
+          <button className="flex items-center border-gray-500 gap-2 px-4 py-1 border rounded hover:bg-gray-100 text-sm">
             Next <FaGreaterThan />
           </button>
         </div>

@@ -6,7 +6,7 @@ import { MdOutlineNetworkCell } from "react-icons/md";
 import { FaGreaterThan } from "react-icons/fa6";
 import { PiLessThanBold } from "react-icons/pi";
 import Othermodal from "./Othermodal";
-import UserForm from "./UserForm";
+import UserForm from "./Userform";
 function Users() {
   const [isOpen, setIs] = useState(false);
   const [pencilpop, setpencilpop] = useState(false);
@@ -30,11 +30,11 @@ function Users() {
   }
   return (
     <div>
-      <div className="w-[92%] m-auto mt-[10%]">
+      <div className="w-[97%] mr-7 mt-25">
         <div className="flex   items-center justify-between mt-5">
           <h1 className="text-2xl font-semibold">Users</h1>
           <button
-            className="bg-sky-500 hover:bg-sky-600 rounded text-white px-3 py-1 mt-5 font-medium text-xs"
+            className="bg-sky-500 hover:bg-sky-600 rounded text-white px-4 py-2 mt-5 font-medium text-xs"
             onClick={Adduser}
           >
             + Add Users
@@ -72,7 +72,7 @@ function Users() {
                   <td></td>
                   <td className="flex items-center gap-2 py-3">
                     <span
-                      className="border border-gray-400 rounded p-1 hover:bg-sky-100"
+                      className="border-1 border-gray-600 rounded p-1 text-[15px] hover:bg-sky-100"
                       onClick={penci}
                     >
                       <GoPencil />
@@ -82,7 +82,7 @@ function Users() {
                     )}
 
                     <span
-                      className="border border-gray-400 rounded p-1 hover:bg-sky-100"
+                      className="border-1 border-gray-600 rounded p-1 text-[15px] hover:bg-sky-100"
                       onClick={delete1}
                     >
                       <MdDeleteOutline />
@@ -102,7 +102,7 @@ function Users() {
                   <td></td>
                   <td className="flex items-center gap-2 py-3">
                     <span
-                      className="border border-gray-400 rounded p-1 hover:bg-sky-100"
+                      className="border-1 border-gray-600 rounded p-1 text-[15px] hover:bg-sky-100"
                       onClick={penci}
                     >
                       <GoPencil />
@@ -111,7 +111,7 @@ function Users() {
                       <UserForm onClose={() => setpencilpop(false)}></UserForm>
                     )}
                     <span
-                      className="border border-gray-400 rounded p-1 hover:bg-sky-100"
+                      className="border-1 border-gray-600 rounded p-1 text-[15px] hover:bg-sky-100"
                       onClick={delete1}
                     >
                       <MdDeleteOutline />
@@ -131,7 +131,7 @@ function Users() {
                   <td></td>
                   <td className="flex items-center gap-2 py-3">
                     <span
-                      className="border border-gray-400 rounded p-1 hover:bg-sky-100"
+                      className="border-1 border-gray-600 rounded p-1 text-[15px] hover:bg-sky-100"
                       onClick={penci}
                     >
                       <GoPencil />
@@ -140,7 +140,7 @@ function Users() {
                       <UserForm onClose={() => setpencilpop(false)}></UserForm>
                     )}
                     <span
-                      className="border border-gray-400 rounded p-1 hover:bg-sky-100"
+                      className="border-1 border-gray-600 rounded p-1 text-[15px] hover:bg-sky-100"
                       onClick={delete1}
                     >
                       <MdDeleteOutline />
@@ -160,7 +160,7 @@ function Users() {
                   <td></td>
                   <td className="flex items-center gap-2 py-3">
                     <span
-                      className="border border-gray-400 rounded p-1 hover:bg-sky-100"
+                      className="border-1 border-gray-600 rounded p-1 text-[15px] hover:bg-sky-100"
                       onClick={penci}
                     >
                       <GoPencil />
@@ -169,7 +169,7 @@ function Users() {
                       <UserForm onClose={() => setpencilpop(false)}></UserForm>
                     )}
                     <span
-                      className="border border-gray-400 rounded p-1 hover:bg-sky-100"
+                      className="border-1 border-gray-600 rounded p-1 text-[15px] hover:bg-sky-100"
                       onClick={delete1}
                     >
                       <MdDeleteOutline />

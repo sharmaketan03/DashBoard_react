@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const AssetDetails1 = () => {
   return (
     <div className="p-6 min-h-screen mt-24 bg-gray-50">
-      {/* Header */}
+   
       <div className="flex items-center gap-4 mb-6 px-[9%]">
         <button className="text-gray-600 hover:text-gray-800 h-[30px] w-[30px]  rounded-full flex justify-center items-center">
               <Link to="/Assets"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
@@ -14,12 +14,12 @@ const AssetDetails1 = () => {
         <h1 className="text-2xl font-bold">Asset 1</h1>
       </div>
 
-      {/* Main Content */}
-      <div className="flex justify-center gap-10 px-[9%]">
-        {/* Left Section: Asset Details and Attachments */}
-        <div className="w-[40%] space-y-6">
-          {/* Asset Details */}
-          <div className="bg-white p-6 rounded-lg shadow border  border-gray-400">
+     
+      <div className="flex justify-center gap-10 ">
+       
+        <div className="w-[60%] space-y-6">
+         
+          <div className="bg-white p-6 rounded-lg border-gray-200 border  ">
             <h2 className="text-lg font-semibold mb-4">Asset Details</h2>
             <div className="space-y-4">
               {[
@@ -27,23 +27,23 @@ const AssetDetails1 = () => {
                 { label: "Company", value: "Job client add" },
                 { label: "Site", value: "TSC" },
                 { label: "Site Address", value: "total" },
-                { label: "Primary Contact", value: "N/A" },
-                { label: "Email", value: "N/A" },
-                { label: "Phone", value: "N/A" },
+                { label: "Primary Contact", value: "" },
+                { label: "Email", value: "" },
+                { label: "Phone", value: "" },
               ].map((item, index) => (
                 <div key={index}>
                   <div className="flex justify-between">
                     <p className="text-sm text-gray-500">{item.label}</p>
                     <p className="text-sm font-semibold">{item.value}</p>
                   </div>
-                  <hr className=" mt-[20px]" />
+                  <hr className=" mt-[20px] text-gray-200" />
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Attachment Section */}
-          <div className="bg-white p-6 rounded-lg shadow border border-gray-400">
+        
+          <div className="bg-white p-6 rounded-lg border border-gray-200">
             <h2 className="text-lg font-semibold mb-4">Attachment</h2>
             <div className="flex justify-between items-center">
               <p className="text-sm text-gray-500">No attachments</p>
@@ -52,7 +52,7 @@ const AssetDetails1 = () => {
               </button>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow border  border-gray-400">
+          <div className="bg-white p-6 rounded-lg  border  border-gray-200">
             <h2 className="text-lg font-semibold mb-4">Ticket History</h2>
             <table className="w-full border-collapse text-left text-sm">
               <thead>
@@ -84,13 +84,10 @@ const AssetDetails1 = () => {
           </div>
         </div>
 
-        {/* Right Section: Ticket History and Comments */}
-        <div className="w-[50%] space-y-6">
-          {/* Ticket History */}
       
-
-          {/* Comments / Updates */}
-          <div className="bg-white p-6 rounded-lg shadow border  border-gray-400">
+        <div className="w-[60%] space-y-6">
+        
+          <div className="bg-white p-6 rounded-lg  border  border-gray-200">
             <h2 className="text-lg font-semibold mb-4">Comments / Updates</h2>
             <textarea
               className="w-full bg-blue-50 p-3 rounded border border-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-200 mb-4"
@@ -101,7 +98,7 @@ const AssetDetails1 = () => {
               Save
             </button>
 
-            {/* Comment List */}
+         
             <div className="mt-6">
               <div className="p-4 rounded-lg border border-gray-200 mb-4 flex items-start justify-between">
                 <div>

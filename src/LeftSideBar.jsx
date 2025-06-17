@@ -132,7 +132,7 @@ const LeftSideBar = () => {
             </li>
 
             <li>
-              <NavLink to="#" className={linkClasses}>
+              <NavLink to="#" className="flex items-center gap-3 px-[20px] py-[10px] rounded-md text-[12px] font-medium" >
                 <MdLogout className="text-lg" /> Logout
               </NavLink>
             </li>

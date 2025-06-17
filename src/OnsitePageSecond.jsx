@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ResolveTicketModal from "./ResolveTicketModal";
+import { Link } from "react-router-dom";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 
 function DashboardonsitePageSecond() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -8,7 +10,14 @@ function DashboardonsitePageSecond() {
     <div className="p-6 text-sm font-sans mt-24 bg-gray-50 min-h-screen">
       <div className="mb-4 flex justify-between items-center">
         <div>
-          <h1 className="text-xl font-bold">Support Ticket #10005</h1>
+          <div className="flex items-center gap-3">
+            <div>
+               <Link to="/"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
+            </div>
+            <div>
+               <h1 className="text-xl font-bold">Support Ticket #10005</h1>
+            </div>
+          </div>
           <p className="text-gray-500 text-xs">
             Created October 25, 2014 - 12:57pm | Claimed by Clark Kelly, Sterling Jnr, Ashfield Job
           </p>

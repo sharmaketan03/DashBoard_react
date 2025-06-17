@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import { AiOutlineEye } from "react-icons/ai";
+import { LuEye } from "react-icons/lu";
 
 const ToInvoice = () => {
   const [activeTab, setActiveTab] = useState("To Invoice");
 
   return (
-    <div className="mt-[10%] w-[96%] pl-10">
+    <div className="mt-25 w-[97%] ">
      
 
      <div className="flex items-center justify-between">
@@ -83,8 +83,8 @@ const ToInvoice = () => {
                   </button>
                 </td>
                 <td className="px-2 py-2">
-                  <button className="p-2 rounded hover:bg-blue-100 text-gray-700">
-                    <AiOutlineEye />
+                  <button className="p-[5px]  border rounded border-gray-500 hover:bg-gray-100 cursor-pointer">
+                     <LuEye />
                   </button>
                 </td>
               </tr>

@@ -13,6 +13,7 @@ import {
 } from "react-icons/fi";
 import { AiOutlineEye } from "react-icons/ai";
 import { FiPhone, FiMail, FiMessageSquare } from "react-icons/fi";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 
 const JobCardNext = () => {
   const [activeTab, setActiveTab] = useState("Overview");
@@ -24,7 +25,7 @@ const JobCardNext = () => {
       <div className="bg-white ">
         <div className="flex justify-between items-center px-6 py-4">
           <div className="flex items-start gap-3">
-            <IoArrowBack className="text-2xl text-gray-700 cursor-pointer mt-1 border-2 rounded-[50%]" />
+             <Link to="/jobcard"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
             <div>
               <h1 className="text-xl font-bold">Job Card #30000</h1>
               <div className="text-xs text-gray-600 mt-1">
