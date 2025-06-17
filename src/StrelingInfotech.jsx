@@ -3,6 +3,7 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { IoArrowBack } from "react-icons/io5";
 import { FiEdit2 } from "react-icons/fi";
+import { FiCopy, FiEdit, FiTrash2, FiUser, FiPhone } from "react-icons/fi";
 
 const StrelingInfotech = () => {
   const [selectedSite, setSelectedSite] = useState("");
@@ -139,7 +140,123 @@ const StrelingInfotech = () => {
         </h2>
         <HighchartsReact highcharts={Highcharts} className="w-[300px] " options={chartOptions} />
       </div>
+
+   
       </div>
+          <div className="max-w-4xl mx-auto p-6 bg-white rounded shadow-md space-y-6">
+      {/* Ticket Header */}
+      <div className="p-4 border rounded">
+        <div className="flex justify-between items-center mb-2">
+          <h2 className="font-semibold text-gray-800">Support Ticket URL</h2>
+          <button className="px-3 py-1 text-sm bg-gray-200 rounded" disabled>
+            Deactivate
+          </button>
+        </div>
+        <div className="flex items-center gap-2 text-blue-600 mb-2">
+          <FiCopy className="cursor-pointer" />
+          <span className="text-sm underline cursor-pointer">Copy link</span>
+        </div>
+        <input
+          type="text"
+          readOnly
+          value="https://tsc.sterlinginfotech.com/support/IYGNBUDXOTZBCIE"
+          className="w-full p-2 border rounded bg-blue-50 text-blue-700 font-mono"
+        />
+      </div>
+
+      {/* Notes Section */}
+      <div className="p-4 border rounded space-y-4">
+        <h3 className="font-semibold text-gray-800 mb-2">General Site Notes</h3>
+        <textarea
+          placeholder="Start typing..."
+          className="w-full p-3 border rounded bg-blue-50 resize-none focus:outline-none focus:ring-2 focus:ring-blue-300"
+          rows={3}
+        ></textarea>
+
+        {/* Note 1 */}
+        <div className="p-4 border rounded flex items-start justify-between bg-white shadow-sm">
+          <div className="flex gap-3">
+            <FiUser className="text-xl mt-1" />
+            <div>
+              <div className="text-sm font-semibold text-gray-700">
+                Sterling Infotech
+              </div>
+              <div className="text-xs text-blue-500 mb-1">
+                Fri, 04 Oct 2024 - 05:47pm
+              </div>
+              <p className="text-sm text-gray-700">
+                Curabitur eget efficitur sem, in vehicula quam.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-2">
+            <button className="text-gray-500 hover:text-blue-600">
+              <FiEdit />
+            </button>
+            <button className="text-gray-500 hover:text-red-500">
+              <FiTrash2 />
+            </button>
+          </div>
+        </div>
+
+        {/* Note 2 */}
+        <div className="p-4 border rounded flex items-start justify-between bg-white shadow-sm">
+          <div className="flex gap-3">
+            <FiPhone className="text-xl mt-1" />
+            <div>
+              <div className="text-sm font-semibold text-gray-700">
+                Sterling Infotech
+              </div>
+              <div className="text-xs text-blue-500 mb-1">
+                Fri, 04 Oct 2024 - 05:47pm
+              </div>
+              <p className="text-sm text-gray-700">
+                Quisque vel sem eu lectus gravida malesuada. Cras ultrices
+                porttitor diam, eleifend accumsan ipsum porttitor id. Curabitur
+                eget efficitur sem, in vehicula quam.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-2">
+            <button className="text-gray-500 hover:text-blue-600">
+              <FiEdit />
+            </button>
+            <button className="text-gray-500 hover:text-red-500">
+              <FiTrash2 />
+            </button>
+          </div>
+        </div>
+
+        {/* Note 3 */}
+        <div className="p-4 border rounded flex items-start justify-between bg-white shadow-sm">
+          <div className="flex gap-3">
+            <div className="text-xl mt-1">🗒</div>
+            <div>
+              <div className="text-sm font-semibold text-gray-700">
+                Sterling Infotech
+              </div>
+              <div className="text-xs text-blue-500 mb-1">
+                Fri, 04 Oct 2024 - 05:46pm
+              </div>
+              <p className="text-sm text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                vel sem eu lectus gravida malesuada. Cras ultrices porttitor
+                diam, eleifend accumsan ipsum porttitor id. Curabitur eget
+                efficitur sem, in vehicula quam.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-2">
+            <button className="text-gray-500 hover:text-blue-600">
+              <FiEdit />
+            </button>
+            <button className="text-gray-500 hover:text-red-500">
+              <FiTrash2 />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   );
 };

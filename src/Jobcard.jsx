@@ -46,7 +46,7 @@ const Jobcard = () => {
 
 
       {isModalOpen && (
-                <div className="fixed inset-0 bg-opacity-30 flex justify-center items-center z-50" onClick={closeModal}>
+                <div className="fixed inset-0  backdrop-blur-sm flex justify-center items-center z-50" onClick={closeModal}>
                     <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
                         <div className="flex justify-between items-center border-b pb-2 mb-5">
                             <h2 className="text-xl font-bold">Add Client</h2>
@@ -80,7 +80,7 @@ const Jobcard = () => {
 
 
 {isClickOpen && (
-                <div className="fixed inset-0  bg-opacity-50 flex justify-center items-center z-50" onClick={closeClick}>
+                <div className="fixed inset-0  backdrop-blur-sm flex justify-center items-center z-50" onClick={closeClick}>
                     <div className="bg-white p-6 rounded-lg w-[80%] shadow-lg" onClick={(e) => e.stopPropagation()}>
                         <div className="flex justify-between items-center border-b pb-2 mb-5">
                             <h2 className="text-xl font-bold">Add Asset</h2>
@@ -121,7 +121,7 @@ const Jobcard = () => {
 
 
 {isShowOpen && (
-                <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50" onClick={closeShow}>
+                <div className="fixed inset-0  backdrop-blur-sm flex justify-center items-center z-50" onClick={closeShow}>
                     <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
                         <div className="flex justify-between items-center border-b pb-2 mb-5">
                             <h2 className="text-xl font-bold">Create Recurring Job Card</h2>
@@ -206,7 +206,7 @@ const Jobcard = () => {
 
 
 {isShowOpen && (
-                <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50" onClick={closeShow}>
+                <div className="fixed inset-0  backdrop-blur-sm flex justify-center items-center z-50" onClick={closeShow}>
                     <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
                         <div className="flex justify-between items-center border-b pb-2 mb-5">
                             <h2 className="text-xl font-bold">Create Recurring Job Card</h2>
@@ -248,7 +248,7 @@ const Jobcard = () => {
 
 
             {isShowDiv && (
-                <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50" onClick={closeShow}>
+                <div className="fixed inset-0  backdrop-blur-sm flex justify-center items-center z-50" onClick={closeShow}>
                     <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
                         <div className="flex justify-between items-center border-b pb-2 mb-5">
                             <h2 className="text-xl font-bold">Add Job Card</h2>

@@ -105,7 +105,7 @@ function Clients() {
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white">
             {/* Table Head */}
-            <thead className="bg-sky-300">
+            <thead className="bg-[#dff6ff] text-blue-900">
               <tr>
                 <th className="px-6 py-3 text-left font-semibold text-gray-800 w-[25%]">
                   Company Name
@@ -132,18 +132,18 @@ function Clients() {
                 <td className="px-6 py-3">0</td>
                 <td className="px-6 py-3">
                   <div className="flex gap-2">
-                    <a
-                      href="#"
+                    <Link
+                      to="/Google"
                       className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
                     >
                       <LuEye />
-                    </a>
-                    <a
-                      href="#"
+                    </Link>
+                    <Link
+                      to="/Google"
                       className="p-2 bg-gray-100 border rounded hover:bg-gray-200"
                     >
                       <GoPencil />
-                    </a>
+                    </Link>
                   </div>
                 </td>
               </tr>

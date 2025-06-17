@@ -3,7 +3,7 @@ import {  FiEdit2, FiUpload, FiLink } from "react-icons/fi";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-const SiteOverview = () => {
+const Google = () => {
   const [notes, setNotes] = useState("");
   const [selectedSite, setSelectedSite] = useState("");
 
@@ -14,7 +14,7 @@ const SiteOverview = () => {
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2 text-xl font-semibold cursor-pointer">
        <Link to="/clients"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
-          <span>Ster</span>
+          <span>Google</span>
         </div>
         <select
           value={selectedSite}
@@ -29,7 +29,7 @@ const SiteOverview = () => {
       </div>
 
   
-      <div className="flex space-x-6 border-gray-300 border-b text-sm font-medium text-gray-600 overflow-x-auto">
+      <div className="flex space-x-20 border-gray-300 border-b text-sm font-medium text-gray-600 overflow-x-auto">
         <button className="pb-2 text-sky-600 border-b-2 border-sky-600">Overview</button>
         <button className="pb-2">Service Agreements</button>
         <button className="pb-2">Work History</button>
@@ -69,13 +69,13 @@ const SiteOverview = () => {
               <span>Date Created</span>
               <div className="flex items-center gap-2">
                 <FiEdit2 className="text-gray-400" />
-                <span className="text-gray-600">16-09-2024</span>
+                <span className="text-gray-600">10-09-2024</span>
               </div>
             </div>
               <hr className="mb-4 text-gray-200" />
             <div className="flex justify-between text-sm text-gray-700">
               <span>Company</span>
-              <span>Ster</span>
+              <span>Google</span>
             </div>
               <hr className="mb-4 text-gray-200" />
             <div className="flex justify-between text-sm text-gray-700">
@@ -105,7 +105,7 @@ const SiteOverview = () => {
         <div className="space-y-6">
           <div className="border border-gray-300 p-4 rounded-md h-[100px]">
             <h4 className="text-sm font-semibold">Support Tickets by Title</h4>
-            <p className="text-xs text-gray-500 mt-2">There are no tickets for this site.</p>
+            <p className="text-xs text-gray-500 mt-2 text-center">There are no tickets for this site.</p>
           </div>
 
           <div className="border border-gray-300 p-4 rounded-md flex justify-between items-center">
@@ -134,4 +134,4 @@ const SiteOverview = () => {
   );
 };
 
-export default SiteOverview;
+export default Google;

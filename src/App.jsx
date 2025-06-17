@@ -26,6 +26,7 @@ import SiteOverview from "./Ster"
 import StrelingInfotech from "./StrelingInfotech"
 import Clientstest from "./ClientTest"
 import JobClientAdd from "./JobClientAdd"
+import Google from "./Google"
 
 
 const router = createBrowserRouter([
@@ -124,6 +125,10 @@ const router = createBrowserRouter([
            {
       path:"/JobClientAdd",
       element:<JobClientAdd/>
+      },
+            {
+      path:"/Google",
+      element:<Google/>
       },
       
     ]

@@ -1,6 +1,7 @@
 import React from "react";
 import { FiArchive, FiClipboard } from "react-icons/fi";
 import { HiOutlineArrowLeft } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const SupportTicket = () => {
   return (
@@ -8,7 +9,7 @@ const SupportTicket = () => {
       {/* Header Section */}
       <div className="flex justify-between items-center border-b pb-4 mb-6">
         <div className="flex items-center gap-2">
-          <a href="/support"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></a>
+          <Link to="/support"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
   
           <div>
             <h1 className="text-2xl font-semibold">Support Ticket #10010</h1>

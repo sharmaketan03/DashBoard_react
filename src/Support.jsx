@@ -6,6 +6,7 @@ import { FaEye } from "react-icons/fa";
 import { LuPencil } from "react-icons/lu";
 import { FiArrowRight } from "react-icons/fi";
 import { IoIosArrowForward } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
 
 import Portal from "./Portal";
 
@@ -33,18 +34,14 @@ function Support() {
     setPortalOpen(false);
   };
 
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // const handleClick = () => {
-  //   setIsOpen(!isOpen);
-  // };
+  
 
   return (
     <div className=" mt-[50px] pt-[50px] w-[92%] mx-12">
       <div className="flex item-center justify-between">
         <h1 className="text-2xl font-bold mb-6">Support Tickets</h1>
 
-        {/* Buttons */}
+       
         <div className="flex gap-4 mb-6">
           <button
             className="flex items-center gap-2 px-2 py-2 border rounded-lg text-black-600 hover:bg-blue-100"
@@ -68,7 +65,7 @@ function Support() {
                     className="text-gray-900 text-[30px] hover:text-gray-900 text-lg"
                     onClick={closeModal}
                   >
-                    &times;
+                  <RxCross2 />
                   </button>
                 </div>
                 <form>
@@ -157,7 +154,7 @@ function Support() {
                     className="text-gray-900 text-[30px] hover:text-gray-900 text-lg"
                     onClick={closeclick}
                   >
-                    &times;
+                    <RxCross2 />
                   </button>
                 </div>
 
@@ -262,11 +259,11 @@ function Support() {
 
           {isShowOpen && (
             <div
-              className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50 p-[180px] "
+              className="fixed inset-0  backdrop-blur-sm flex justify-center items-center z-50 p-[180px] "
               onClick={closeShow}
             >
               <div
-                className="bg-white p-6 rounded-lg w-[45%] shadow-lg"
+                className="bg-white p-6 rounded-lg  w-[45%] shadow-lg"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex justify-between items-center border-b pb-2 mb-5">
@@ -275,7 +272,7 @@ function Support() {
                     className="text-gray-900 text-[30px] hover:text-gray-900"
                     onClick={closeShow}
                   >
-                    &times;
+                     <RxCross2 />
                   </button>
                 </div>
                 <form>
@@ -384,7 +381,7 @@ function Support() {
             <h2 className="text-[13px]">On-site Technician</h2>
             <h1 className="text-4xl font-bold text-yellow-700 ">2</h1>
           </div>
-          <span className=" border-4 border-gray-400 border-t-yellow-700 p-[7px] rounded-full h-[45px] w-[45px] font-bold text-sm  bg-orange-200 mb-3">
+          <span className=" border-4 border-gray-400 border-t-yellow-700 p-[7px] mt-4 rounded-full h-[45px] w-[45px] font-bold text-sm  bg-orange-200 mb-3">
             20%
           </span>
         </div>
@@ -394,7 +391,7 @@ function Support() {
             <h2 className="text-[13px]">Resolved</h2>
             <h1 className="text-4xl font-bold text-green-500 ">1</h1>
           </div>
-          <span className=" border-4 border-gray-400 border-t-green-500 p-[7px] rounded-full h-[45px] w-[45px] font-bold text-sm   mb-3">
+          <span className=" border-4 border-gray-400 border-t-green-500 p-[7px] mt-4 rounded-full h-[45px] w-[45px] font-bold text-sm   mb-3">
             10%
           </span>
         </div>

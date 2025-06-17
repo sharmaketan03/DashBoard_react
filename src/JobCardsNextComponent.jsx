@@ -303,7 +303,7 @@ const JobCardNext = () => {
           </div>
         </div>
 
-        <div className="w-1/4 bg-[#1f2b33] text-white p-4 rounded shadow-sm">
+        <div className="w-1/4 bg-[#1f2b33] text-white p-4 rounded shadow-sm sticky top-20">
           <div className="flex justify-between items-center mb-4">
             <h4 className="font-bold text-sm">Job Status</h4>
             <AiOutlineEdit />
