@@ -5,7 +5,7 @@ import { LuEye } from "react-icons/lu";
 import { GoPencil } from "react-icons/go";
 import { FaLessThan, FaGreaterThan } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { ImCross } from "react-icons/im";
+import { RxCross2 } from "react-icons/rx";
 function Clients() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,7 +40,7 @@ function Clients() {
                 className="text-gray-900 text-[30px] hover:text-gray-700" 
                 onClick={closeModal}
               >
-          <ImCross />
+           <RxCross2 />
               </button>
             </div>
            
