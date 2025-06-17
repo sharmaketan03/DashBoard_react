@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import ResolveTicketModal from "./ResolveTicketModal";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowLeft } from "react-icons/hi";
+import { FiPlus, FiFlag, FiTrash2 } from "react-icons/fi";
+import { FaPlay } from "react-icons/fa";
+import { FaSquare } from "react-icons/fa6";
+import { FiPhone, FiMail, FiMessageSquare } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
+import { LuUpload } from "react-icons/lu";
 
 function DashboardonsitePageSecond() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("asset");
 
   return (
     <div className="p-6 text-sm font-sans mt-24 bg-gray-50 min-h-screen">
@@ -12,14 +20,16 @@ function DashboardonsitePageSecond() {
         <div>
           <div className="flex items-center gap-3">
             <div>
-               <Link to="/"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
+              <Link to="/">
+                <HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" />
+              </Link>
             </div>
             <div>
-               <h1 className="text-xl font-bold">Support Ticket #10005</h1>
+              <h1 className="text-xl font-bold">Support Ticket #10005</h1>
             </div>
           </div>
-          <p className="text-gray-500 text-xs">
-            Created October 25, 2014 - 12:57pm | Claimed by Clark Kelly, Sterling Jnr, Ashfield Job
+          <p className="text-gray-500 text-xs pt-2 pb-6">
+          Created: September 24, 2024 : 02:48pm Claimed by: Clark Kelly, Shankey Jn, , <span className="text-blue-500">Edit</span>
           </p>
         </div>
         <div className="flex space-x-2">
@@ -31,7 +41,9 @@ function DashboardonsitePageSecond() {
       <div className="flex mb-6">
         <div className="flex-1 text-center bg-gray-200 p-2 rounded-l">Open</div>
         <div className="flex-1 text-center bg-gray-300 p-2">Working</div>
-        <div className="flex-1 text-center bg-orange-400 p-2 text-white">Onsite Technician</div>
+        <div className="flex-1 text-center bg-orange-400 p-2 text-white">
+          Onsite Technician
+        </div>
         <div
           className="flex-1 text-center bg-gray-200 p-2 rounded-r cursor-pointer hover:bg-gray-300 transition"
           onClick={() => setIsModalOpen(true)}
@@ -41,125 +53,293 @@ function DashboardonsitePageSecond() {
       </div>
 
       <div className="grid grid-cols-2 gap-6">
-        <div>
-          <div className="bg-white shadow-sm p-4 rounded mb-6">
-            <h2 className="font-semibold text-3xl mb-2">Sterling Infotech</h2>
-            <p>sterling - 254 Mulwala Farm</p>
-            <p>1234567</p>
-            <p>sterling_27794@yahoo.co.uk</p>
-            <a href="#" className="text-blue-500 text-xs">Edit Contact</a>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            {['Site', 'Asset', 'Warranty', 'Parts'].map(label => (
-              <div key={label}>
-                <label className="block text-xs font-medium text-gray-700">{label}</label>
-                <input type="text" className="mt-1 w-full border border-gray-300 rounded p-2" />
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="bg-gray-200 px-2 py-1 rounded text-xs">Warranty</span>
-            <span className="bg-gray-200 px-2 py-1 rounded text-xs">Out of Warranty</span>
-            <span className="bg-blue-400 text-white px-2 py-1 rounded text-xs">FOC</span>
-            <span className="bg-yellow-300 px-2 py-1 rounded text-xs">No Parts</span>
-          </div>
-
-          <div className="mb-6">
-            <label className="block text-xs font-medium text-gray-700">Title</label>
-            <input type="text" value="Event - 25th Aug" className="w-full border mt-1 p-2 rounded" readOnly />
-            <label className="block text-xs font-medium text-gray-700 mt-3">Description</label>
-            <textarea className="w-full border mt-1 p-2 rounded" rows="3" readOnly>text</textarea>
-            <a href="#" className="text-blue-500 text-xs">Edit Description</a>
-          </div>
-
-          <div className="mb-4">
-            <p className="font-semibold mb-2">Attachments</p>
-            <div className="grid grid-cols-3 gap-4">
-              {[1, 2, 3].map(i => (
-                <div key={i} className="h-24 bg-gray-100 border rounded"></div>
-              ))}
+        <div className="max-w-3xl mx-auto p-6 w-[100%] h-[97%]  border border-gray-300 rounded-xl space-y-6">
+          {/* Header */}
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-xl font-semibold">Sterling Infotech</h1>
+              <p className="text-sm text-gray-600">
+                Client Site - 345-9610 Aliquam Rd
+                <br />
+                Paul cox
+                <br />
+                4683842798
+                <br />
+                anshu@sterlinginfotech.com
+              </p>
+              <a href="#" className="text-blue-500 text-sm mt-1 inline-block">
+                Edit Contact
+              </a>
             </div>
-          </div>
-        </div>
-
-        <div>
-          <div className="bg-white shadow-sm p-4 rounded mb-6">
-            <div className="flex justify-between mb-3">
-              <div>
-                <p className="font-semibold">Total Time</p>
-                <p className="text-green-600">22hrs 59mins</p>
-                <a href="#" className="text-blue-500 text-xs">View Time</a>
-              </div>
-              <div className="flex gap-2 items-start">
-                <a size="sm">Start Timer</a>
-                <a size="sm">Add Time</a>
-              </div>
-            </div>
-            <p className="font-semibold">Technicians</p>
-            <p>User1</p>
-            <div className="flex gap-2 mt-2">
-              <a size="sm">Add Technician</a>
-              <a size="sm" className="bg-orange-500 text-whiten p-2 text-white rounded-[5px]">Onsite Technician Required</a>
-            </div>
+            <a href="#" className="text-blue-500 text-sm mt-1">
+              Edit Ticket
+            </a>
           </div>
 
-          <div className="bg-white shadow-sm p-4 rounded">
-            <p className="font-semibold mb-2">Comments / Updates</p>
-            <textarea placeholder="Start typing..." className="w-full border rounded p-2 h-24 mb-2" />
-            <div className="mb-4">
-              <p className="text-xs text-gray-500 mb-1">Save As:</p>
+          <hr className="text-gray-300" />
+
+          {/* Details Rows */}
+          <div className="space-y-5 text-sm">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Sites</span>
+              <span className="text-black border-b font-medium">Client Site</span>
+            </div>
+            <hr className="text-gray-300" />
+
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Asset</span>
+              <span className="text-black border-b font-medium">test - #34534</span>
+            </div>
+            <hr className="text-gray-300" />
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Warranty</span>
               <div className="flex gap-2">
-                <a size="sm">Call</a>
-                <a size="sm">Message</a>
-                <a size="sm">Email</a>
+                <span className="bg-gray-200 px-3 py-1 text-xs rounded font-semibold text-gray-600">
+                  WARRANTY
+                </span>
+                <span className="bg-yellow-400 px-3 py-1 text-xs rounded font-semibold text-white">
+                  OUT OF WARRANTY
+                </span>
+                <span className="bg-gray-200 px-3 py-1 text-xs rounded font-semibold text-gray-600">
+                  FOC
+                </span>
               </div>
             </div>
-            <div className="space-y-2">
-              <div className="bg-blue-50 p-2 rounded">
-                <p className="text-xs text-gray-500">Clark Kelly - Thursday, February 05 2015 - 01:23AM</p>
-                <p>Second comment...</p>
+               <hr className="text-gray-300"/>
+
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Parts</span>
+              <div className="flex gap-2">
+                <span className="bg-gray-200 px-3 py-1 text-xs rounded font-semibold text-gray-600">
+                  PARTS REQUIRED
+                </span>
+                <span className="bg-yellow-400 px-3 py-1 text-xs rounded font-semibold text-white">
+                  NO PARTS
+                </span>
               </div>
-              <div className="bg-blue-50 p-2 rounded">
-                <p className="text-xs text-gray-500">Clark Kelly - Sunday, November 17 2014 - 14:13PM</p>
-                <p>texting...</p>
+            </div>
+               <hr className="text-gray-300"/>
+
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Invoice Number</span>
+              <span className="font-medium text-gray-700">MFG-9888</span>
+            </div>
+          </div>
+
+          {/* Title Section */}
+          <div>
+            <h3 className="text-sm font-semibold mb-2">Title</h3>
+            <div className="flex items-center justify-between border px-4 py-2 rounded-md text-sm text-gray-700">
+              Event - 25th Aug
+              <FiChevronDown />
+            </div>
+          </div>
+
+          {/* Description Section */}
+          <div>
+            <h3 className="text-sm font-semibold mb-2">Description</h3>
+            <p className="text-sm text-gray-700">test</p>
+            <a href="#" className="text-blue-500  border-b text-sm mt-1 inline-block">
+              Edit Description
+            </a>
+          </div>
+           <div className=" pt-4">
+      <div className="flex justify-between items-center mb-2">
+        <h3 className="text-sm font-semibold text-gray-800">Attachments</h3>
+        <button className="text-gray-800 hover:text-blue-500">
+          <LuUpload className="w-4 h-4" />
+        </button>
+      </div>
+      <hr className="border-gray-200" />
+    </div>
+        </div>
+
+        <div>
+          <div className="max-w-xl p-6 border border-gray-300 rounded-xl  bg-white">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-md font-semibold text-gray-800">
+                  Total Time
+                </h2>
+                <p className="text-green-500 text-2xl font-bold mt-1">
+                  0hrs 30mins
+                </p>
+                <Link
+                  to="#"
+                  className="text-sm text-blue-500 underline mt-1 inline-block"
+                >
+                  View Time
+                </Link>
               </div>
+
+              <div className="flex items-center gap-3 mt-4">
+                <button className="flex items-center gap-1 px-3 py-2 border rounded-md text-sm font-medium text-gray-800 hover:bg-gray-100">
+                  <FaPlay className="text-black text-lg" />
+                  Start Timer
+                </button>
+                <button className="p-2 border rounded-md hover:bg-gray-100">
+                  <FaSquare className="text-lg text-gray-400" />
+                </button>
+                <button className="flex items-center gap-1 px-3 py-2 border rounded-md text-sm font-medium text-gray-800 hover:bg-gray-100">
+                  <FiPlus className="text-lg" />
+                  Add Time
+                </button>
+              </div>
+            </div>
+
+            <div className="mt-20 flex items-center justify-between">
+              <div>
+                {" "}
+                <h2 className="text-md font-semibold text-gray-800 mb-2">
+                  Technicians
+                </h2>
+              </div>
+              <div className="flex items-center gap-3">
+                <button className="flex items-center gap-1 px-3 py-2 border rounded-md text-sm font-medium hover:bg-gray-100">
+                  <FiPlus />
+                  Add Technician
+                </button>
+                <button className="flex items-center gap-2 px-3 py-2 bg-[#f07c00] text-white rounded-md text-sm font-medium hover:bg-orange-600">
+                  <FiFlag />
+                  On-site Technician Required
+                </button>
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="flex items-center justify-between border-b border-gray-300 mb-10 py-7">
+                <span className="text-gray-800">User1</span>
+                <button className="text-gray-500 text-xl hover:text-red-600">
+                  <FiTrash2 />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="border border-gray-300 rounded-xl mt-8 p-5 bg-white space-y-4">
+            <h2 className="text-md font-semibold">Comments / Updates</h2>
+
+            <textarea
+              className="w-full h-24 border border-gray-300 rounded-md p-3 text-sm text-black resize-none focus:outline-none"
+              placeholder="Start typing..."
+            ></textarea>
+
+            <h1>Save As: </h1>
+            <div className="flex items-center gap-3">
+              <button className="p-2.5 border   border-gray-300 rounded-md hover:bg-gray-100">
+                <FiPhone />
+              </button>
+              <button className="p-2.5 border  border-gray-300  rounded-md hover:bg-gray-100">
+                <FiMail />
+              </button>
+              <button className="p-2.5 border  border-gray-300  rounded-md hover:bg-gray-100">
+                <FiMessageSquare />
+              </button>
+            </div>
+
+            <div className="bg-blue-50 p-4 rounded-md  gap-1">
+              <div className="flex items-center gap-18">
+                <div className="flex gap-1 items-center">
+                  <FiMail className="text-[15px] text-blue-500" />
+                  <span className="font-semibold text-[13px]">Clark Kelly</span>
+                  <span className="text-xs text-blue-500 ml-2">
+                    Wednesday, November 27 2024 - 07:02PM
+                  </span>
+                </div>
+                <div className="text-xs text-blue-500  flex gap-3 cursor-pointer">
+                  <span>Edit</span>
+                  <span>Delete</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-700 mt-1">test</p>
+            </div>
+
+            <div className="bg-blue-50 p-4 rounded-md  gap-1">
+              <div className="flex items-center gap-18">
+                <div className="flex gap-1 items-center">
+                  <FiPhone className="text-[15px] text-blue-500" />
+                  <span className="font-semibold text-[13px]">Clark Kelly</span>
+                  <span className="text-xs text-blue-500 ml-2">
+                    Wednesday, November 27 2024 - 06:47PM
+                  </span>
+                </div>
+                <div className="text-xs text-blue-500  flex gap-3 cursor-pointer">
+                  <span>Edit</span>
+                  <span>Delete</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-700 mt-1">testing...</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-10 bg-white p-4 rounded shadow-sm">
-        <h3 className="font-semibold mb-2">Ticket History</h3>
-        <table className="w-full text-left text-xs border">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="p-2 border">Asset</th>
-              <th className="p-2 border">Site</th>
-              <th className="p-2 border">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="p-2 border">October 10, 2014</td>
-              <td className="p-2 border">May 14, 2015</td>
-              <td className="p-2 border">
-                <span className="bg-orange-300 px-2 py-1 rounded text-white">Resolved</span>
-              </td>
-            </tr>
-            <tr>
-              <td className="p-2 border">Event - 25th Aug</td>
-              <td className="p-2 border">May 14, 2015</td>
-              <td className="p-2 border">
-                <span className="bg-yellow-300 px-2 py-1 rounded">Open</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="border border-gray-300 rounded-xl p-5 w-[550px] bg-white max-w-3xl space-y-5">
+        <h2 className="text-md font-semibold">Ticket History</h2>
+
+        <div className="flex gap-6 border-b">
+          <button
+            className={`pb-2 text-sm font-medium ${
+              activeTab === "asset"
+                ? "text-blue-500 border-b-2 border-blue-500"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("asset")}
+          >
+            Asset
+          </button>
+          <button
+            className={`pb-2 text-sm font-medium ${
+              activeTab === "site"
+                ? "text-blue-500  border-b-2 border-blue-500"
+                : "text-gray-500 "
+            }`}
+            onClick={() => setActiveTab("site")}
+          >
+            Site
+          </button>
+        </div>
+
+        <div className="flex items-center justify-between py-3 border-b border-gray-300">
+          <div className="text-sm text-gray-700">Event - 25th Aug</div>
+          <div className="text-sm text-gray-700">September 05, 2024</div>
+          <div className="text-sm font-bold text-gray-900">CK</div>
+          <div className="bg-yellow-400 text-xs font-medium px-3 py-1 rounded text-white">
+            Open
+          </div>
+          <button className="p-1.5 border rounded-md">
+            <FiArrowRight className="text-gray-700" />
+          </button>
+        </div>
+
+        <div className="flex items-center justify-between py-3 border-b border-gray-300">
+          <div className="text-sm text-gray-700">Event - 25th Aug</div>
+          <div className="text-sm text-gray-700">September 24, 2024</div>
+          <div className="text-sm font-bold text-gray-900">CK</div>
+          <div className="bg-yellow-400 text-xs font-medium px-3 py-1 rounded text-white">
+            Working
+          </div>
+          <button className="p-1.5 border rounded-md">
+            <FiArrowRight className="text-gray-700" />
+          </button>
+        </div>
+
+        <div className="flex items-center justify-center gap-5 py-3 border-b border-gray-300">
+          <div className="text-sm text-gray-700 w-13"></div>
+          <div className="text-sm ml-4 text-gray-700 ">May 04, 2025</div>
+          <div className="text-sm font-bold text-gray-900 mr-40"></div>
+          <div className="bg-yellow-400 text-xs font-medium px-3 py-1 rounded text-white">
+            Open
+          </div>
+          <button className="p-1.5 border ml-8  rounded-md">
+            <FiArrowRight className="text-gray-700 " />
+          </button>
+        </div>
       </div>
 
-      <ResolveTicketModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ResolveTicketModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }
