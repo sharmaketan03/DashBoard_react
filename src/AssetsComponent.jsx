@@ -4,10 +4,10 @@ import { LuEye } from "react-icons/lu";
 const AssetsComponent = () => {
   return (
     <>
-      <div className="mt-[7%]">
+      <div className="mt-[7%] w-[96%] m-auto">
         <h1 className="text-2xl font-bold mb-8">Assets</h1>
         <div className="text-[15px]">
-          <div className="p-6 bg-white w-[1000px] border border-gray-300 rounded-xl shadow-md">
+          <div className="p-6 bg-white w-[100%] border border-gray-300 rounded-xl shadow-md">
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm text-left border-collapse">
                 <thead>

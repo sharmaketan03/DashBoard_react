@@ -144,7 +144,7 @@ const LeftSideBar = () => {
 
           <li  classname="">
             <Link
-              to="/"
+              to="#"
               className="flex items-center gap-3 px-[20px] py-[10px] rounded-md hover:bg-blue-200 hover:text-blue-400 text-[12px]"
             >
               <MdLogout className="text-lg" /> Logout

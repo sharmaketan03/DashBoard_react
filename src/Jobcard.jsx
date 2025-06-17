@@ -1,28 +1,294 @@
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+
 const Jobcard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isClickOpen, setIsClickOpen] = useState(false);
+  const [isShowOpen, setIsShowOpen] = useState(false);
+  const [isShowDiv, setIsShowDiv] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const openClick = () => setIsClickOpen(true);
+  const closeClick = () => setIsClickOpen(false);
+
+  const openShow = () => setIsShowOpen(true);
+    const closeShow = () => setIsShowOpen(false);
+
+    const openDiv = () => setIsShowDiv(true);
+    const closeDiv = () => setIsShowDiv(false);
   return (
-    <div className="p-6 bg-gray-50 font-sans min-h-screen  w-[100%] mt-[80px] ">
-      <div className="flex flex-col sm:flex-row justify-around items-start sm:items-center mb-6">
+
+    <div className="p-1  bg-gray-50 mt-24 font-sans min-h-screen  w-[92%] m-auto">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
+
+   
         <h1 className="text-3xl font-bold text-gray-800 mb-4 sm:mb-0">Job Cards</h1>
         <div className="flex flex-wrap items-center gap-6">
-          <button className="text-sm font-medium text-gray-600 px-3 py-2 border border-gray-300 rounded-md">
+          <button onClick={openModal} className="font-medium text-gray-600 px-3 py-2 border border-gray-300 rounded-md">
             + Add Client
           </button>
-          <button className="text-sm font-medium text-gray-600 px-3 py-2 border border-gray-300 rounded-md">
+          <button  className="text-sm font-medium text-gray-600 px-3 py-2 border border-gray-300 rounded-md">
             + Add Site
           </button>
-          <button className="text-sm font-medium text-gray-600 px-3 py-2 border border-gray-300 rounded-md">
+          <button onClick={openClick} className="text-sm font-medium text-gray-600 px-3 py-2 border border-gray-300 rounded-md">
             + Add Asset
           </button>
-          <button className="text-sm font-medium text-blue-600 px-3 py-2 border border-blue-300 rounded-md">
+          <button onClick={openShow} className="text-sm font-medium text-blue-600 px-3 py-2 border border-blue-300 rounded-md">
             + Add Recurring
           </button>
-          <button className="text-sm font-medium text-blue-600 px-3 py-2 border border-blue-300 rounded-md">
+          <button onClick={openDiv} className="text-sm font-medium text-blue-600 px-3 py-2 border border-blue-300 rounded-md">
             + Add Job Card
           </button>
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-6">
+
+      {isModalOpen && (
+                <div className="fixed inset-0 bg-opacity-30 flex justify-center items-center z-50" onClick={closeModal}>
+                    <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center border-b pb-2 mb-5">
+                            <h2 className="text-xl font-bold">Add Client</h2>
+                            <button className="text-gray-900 text-[30px] hover:text-gray-700" onClick={closeModal}>&times;</button>
+                        </div>
+                        <form>
+                            <div className="mb-4">
+                                <label className="block mb-1 text-gray-700">Company Name</label>
+                                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Enter company name" />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block mb-1 text-gray-700">ABN</label>
+                                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Enter ABN" />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block mb-1 text-gray-700">Address</label>
+                                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Enter a location" />
+                            </div>
+                            <div className="flex items-center gap-2 mb-4 mt-[20px]">
+                                <input type="checkbox" id="single-site" className="w-4 h-4" />
+                                <label htmlFor="single-site" className="text-gray-800 font-bold text-[14px]">Single site company? Set as default site</label>
+                            </div>
+                            <div className="flex gap-4 mt-[30px]">
+                                <button type="button" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Client</button>
+                                <button type="button" className="text-gray-500 hover:text-gray-700" onClick={closeModal}>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+
+{isClickOpen && (
+                <div className="fixed inset-0  bg-opacity-50 flex justify-center items-center z-50" onClick={closeClick}>
+                    <div className="bg-white p-6 rounded-lg w-[80%] shadow-lg" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center border-b pb-2 mb-5">
+                            <h2 className="text-xl font-bold">Add Asset</h2>
+                            <button className="text-gray-900 text-[30px] hover:text-gray-700" onClick={closeClick}>&times;</button>
+                        </div>
+                        <form>
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select Client</option></select>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select Site</option></select>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Type Machine Name" />
+                                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Type Serial Number" />
+                            </div>
+                            <div className="grid grid-cols-5 gap-4 mb-4">
+                                <div className="flex items-center col-span-1">
+                                    <input type="checkbox" id="select-all" className="w-4 h-4" />
+                                    <label htmlFor="select-all" className="ml-2">Select All</label>
+                                </div>
+                                <button className="bg-blue-100 px-3 py-2 rounded">Sedan</button>
+                                <button className="bg-blue-100 px-3 py-2 rounded">SUV</button>
+                                <button className="bg-blue-100 px-3 py-2 rounded">Hatchback</button>
+                                <button className="bg-blue-100 px-3 py-2 rounded">Utility</button>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Make (e.g., Toyota)" />
+                                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Model (e.g., Corolla)" />
+                            </div>
+                            <div className="flex gap-4 mt-4">
+                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Asset</button>
+                                <button type="button" className="text-gray-500 hover:text-gray-700" onClick={closeClick}>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+
+
+{isShowOpen && (
+                <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50" onClick={closeShow}>
+                    <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center border-b pb-2 mb-5">
+                            <h2 className="text-xl font-bold">Create Recurring Job Card</h2>
+                            <button className="text-gray-900 text-[30px] hover:text-gray-700" onClick={closeShow}>&times;</button>
+                        </div>
+                        <form>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Client <span className="text-blue-500">(required)</span></label>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">Site <span className="text-blue-500">(required)</span></label>
+                                    <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">Asset <span className="text-blue-500">(required)</span></label>
+                                    <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                </div>
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Select Requester <span className="text-blue-500">(required)</span></label>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                <button className="text-blue-600 text-sm mt-1">New Requester?</button>
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Description of Issue</label>
+                                <textarea className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" rows="4" placeholder="Enter issue description"></textarea>
+                            </div>
+                            <div className="flex gap-4 mt-6">
+                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Ticket</button>
+                                <button type="button" className="text-gray-500 hover:text-gray-700" onClick={closeShow}>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+
+
+            {isShowOpen && (
+                <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50" onClick={closeShow}>
+                    <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center border-b pb-2 mb-5">
+                            <h2 className="text-xl font-bold">Create Recurring Job Card</h2>
+                            <button className="text-gray-900 text-[30px] hover:text-gray-700" onClick={closeShow}>&times;</button>
+                        </div>
+                        <form>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Client <span className="text-blue-500">(required)</span></label>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">Site <span className="text-blue-500">(required)</span></label>
+                                    <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">Asset <span className="text-blue-500">(required)</span></label>
+                                    <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                </div>
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Select Requester <span className="text-blue-500">(required)</span></label>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                <button className="text-blue-600 text-sm mt-1">New Requester?</button>
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Description of Issue</label>
+                                <textarea className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" rows="4" placeholder="Enter issue description"></textarea>
+                            </div>
+                            <div className="flex gap-4 mt-6">
+                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Ticket</button>
+                                <button type="button" className="text-gray-500 hover:text-gray-700" onClick={closeShow}>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+
+
+
+{isShowOpen && (
+                <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50" onClick={closeShow}>
+                    <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center border-b pb-2 mb-5">
+                            <h2 className="text-xl font-bold">Create Recurring Job Card</h2>
+                            <button className="text-gray-900 text-[30px] hover:text-gray-700" onClick={closeShow}>&times;</button>
+                        </div>
+                        <form>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Client <span className="text-blue-500">(required)</span></label>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">Site <span className="text-blue-500">(required)</span></label>
+                                    <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">Asset <span className="text-blue-500">(required)</span></label>
+                                    <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                </div>
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Select Requester <span className="text-blue-500">(required)</span></label>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                <button className="text-blue-600 text-sm mt-1">New Requester?</button>
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Description of Issue</label>
+                                <textarea className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" rows="4" placeholder="Enter issue description"></textarea>
+                            </div>
+                            <div className="flex gap-4 mt-6">
+                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Ticket</button>
+                                <button type="button" className="text-gray-500 hover:text-gray-700" onClick={closeShow}>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+
+
+            {isShowDiv && (
+                <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50" onClick={closeShow}>
+                    <div className="bg-white p-6 rounded-lg w-[35%] shadow-lg" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center border-b pb-2 mb-5">
+                            <h2 className="text-xl font-bold">Add Job Card</h2>
+                            <button className="text-gray-900 text-[30px] hover:text-gray-700" onClick={closeDiv}>&times;</button>
+                        </div>
+                        <form>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Client <span className="text-blue-500">(required)</span></label>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">Site <span className="text-blue-500">(required)</span></label>
+                                    <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">Asset <span className="text-blue-500">(required)</span></label>
+                                    <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                </div>
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Select Requester <span className="text-blue-500">(required)</span></label>
+                                <select className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"><option>Select</option></select>
+                                <button className="text-blue-600 text-sm mt-1">New Requester?</button>
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Description of Issue</label>
+                                <textarea className="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none" rows="4" placeholder="Enter issue description"></textarea>
+                            </div>
+                            <div className="flex gap-4 mt-6">
+                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Ticket</button>
+                                <button type="button" className="text-gray-500 hover:text-gray-700" onClick={closeDiv}>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+
+      <div className="flex flex-col sm:flex-row gap-5 justify-between items-center pt-6">
         <div className="flex justify-between items-center bg-gray-800 text-white p-6 rounded-lg w-72 h-30 shadow">
           <div>
             <h1 className="text-sm mb-1">Open Job Cards</h1>
@@ -32,13 +298,13 @@ const Jobcard = () => {
             0%
           </div>
         </div>
-
+        
         <div className="flex justify-between items-center bg-white p-6 rounded-lg w-72 h-30 shadow border border-gray-200">
           <div>
             <h1 className="text-sm text-gray-800 mb-1">In Progress</h1>
             <p className="text-3xl font-bold text-yellow-400">1</p>
           </div>
-          <div className="w-12 h-12 rounded-full border-4 border-yellow-400 border-t-transparent rotate-[100deg] flex items-center justify-center text-sm text-gray-800">
+          <div className="w-12 h-12 rounded-full border-4 border-l-yellow-400  flex items-center justify-center text-sm text-gray-400">
             33%
           </div>
         </div>
@@ -48,7 +314,7 @@ const Jobcard = () => {
             <h1 className="text-sm text-gray-800 mb-1">Completed</h1>
             <p className="text-3xl font-bold text-green-500">2</p>
           </div>
-          <div className="w-12 h-12 rounded-full border-4 border-green-400 border-t-transparent rotate-[240deg] flex items-center justify-center text-sm text-gray-800">
+          <div className="w-12 h-12 rounded-full border-4 border-r-green-500   flex items-center justify-center text-sm text-gray-400">
             67%
           </div>
         </div>
@@ -60,7 +326,7 @@ const Jobcard = () => {
 
 
 
- <div className="pt-10 w-full max-w-4xl mx-auto">
+ <div className="pt-5 w-full  mx-auto">
       <div className="flex space-x-8 text-sm font-medium border-b border-gray-200 mb-4 mt">
         <div className="pb-2 border-b-2 border-blue-500 text-blue-600 cursor-pointer">Active</div>
         <div className="pb-2 text-gray-600 hover:text-blue-500 cursor-pointer">Complete</div>
@@ -104,9 +370,11 @@ const Jobcard = () => {
                 </div>
               </td>
               <td className="p-3">
-                <button className="border border-gray-300 rounded p-2 hover:bg-gray-100">
-                  →
-                </button>
+               <Link to="/JobCardNext">
+                     <button className="border border-gray-300 rounded p-2 hover:bg-gray-100">
+                    →
+                  </button>
+                  </Link>
               </td>
             </tr>
           </tbody>

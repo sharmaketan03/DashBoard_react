@@ -55,7 +55,7 @@ const SupportTicket = () => {
       </div>
       <div className="  min-h-screen w-[98%]">
       <div className="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md">
-        {/* Header Section */}
+       
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Job Client Add</h1>
           <p className="text-sm text-gray-500">TSC - total</p>
@@ -64,9 +64,9 @@ const SupportTicket = () => {
           </a>
         </div>
 
-        {/* Main Content Grid */}
+       
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left Column */}
+     
           <div className="col-span-2 space-y-6">
             {/* Job Details */}
             <div className="space-y-4">

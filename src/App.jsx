@@ -14,9 +14,20 @@ import Jobcard from './Jobcard'
 import Clients from './Clients'
 import Users from './Users'
 import SupportTicket from './SupportTicket'
-import ToInvoice from "./ToInvoice"
 
-import SupportTicket2 from './Suppor
+import DashboardWorking from "./DashboardWorking"
+import DashboardOpen from "./OpenFileDashboard"
+import ToInvoice from "./ToInvoice"
+import DashboardOnsiteTechnincFirst from "./OnSitePagefirst"
+import DashboardonsitePageSecond from "./OnsitePageSecond"
+import JobCard from "./JobCardsNextComponent"
+import JobCardNext from "./JobCardsNextComponent"
+import SiteOverview from "./Ster"
+import StrelingInfotech from "./StrelingInfotech"
+import Clientstest from "./ClientTest"
+import JobClientAdd from "./JobClientAdd"
+
+
 const router = createBrowserRouter([
   {
     path:"/",
@@ -75,9 +86,46 @@ const router = createBrowserRouter([
       element:<SupportTicket/>
       },
       {
-      path:"/supportTicket2",
-      element:<SupportTicket2/>
+      path:"/DashboardWorking",
+      element:<DashboardWorking/>
       },
+        {
+      path:"/DashboardOpen",
+      element:<DashboardOpen/>
+      },
+
+        {
+      path:"/DashboardOnsiteTechnincSecond",
+      element:<DashboardOnsiteTechnincFirst/>
+      },
+
+        {
+      path:"/DashboardonsitePageFirst",
+      element:<DashboardonsitePageSecond/>
+      },
+         {
+      path:"/JobCardNext",
+      element:<JobCardNext/>
+      },
+      
+          {
+      path:"/SiteOverview",
+      element:<SiteOverview/>
+      },
+
+          {
+      path:"/StrelingInfotech",
+      element:<StrelingInfotech/>
+      },
+          {
+      path:"/Clientstest",
+      element:<Clientstest/>
+      },
+           {
+      path:"/JobClientAdd",
+      element:<JobClientAdd/>
+      },
+      
     ]
   }
 ])

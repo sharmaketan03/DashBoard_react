@@ -1,13 +1,11 @@
 import React from "react";
 import { LuPencil } from "react-icons/lu";
-
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
     <>
-    <div className="mt-[80px]">
-
-    </div>
+      <div className="mt-[80px]"></div>
       <div>
         <h1 className="text-2xl mt-[4%] font-bold mb-6">Dashboard</h1>
         <div>
@@ -15,7 +13,7 @@ const Dashboard = () => {
             <h2 className="text-lg font-semibold mb-4">My Tickets</h2>
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm text-left border-collapse">
-                <thead >
+                <thead>
                   <tr className="bg-sky-100 text-gray-700 ">
                     <th className="px-4 py-3 font-semibold">Ticket No.</th>
                     <th className="px-4 py-3 font-semibold">Client Name</th>
@@ -42,15 +40,18 @@ const Dashboard = () => {
                       </div>
                     </td>
                     <td className="pt-[20px]">
-                      <span className="bg-[#629C44] w-[120px] leading-8 text-white px-7  rounded-md text-xs block text-center">
-                        On-site Technician
-                      </span>
+                      <Link to="/DashboardonsitePageFirst">
+                        <button className="bg-[#629C44] w-[120px] leading-8 text-white px-7  rounded-md text-xs block text-center">
+                          On-site Technician
+                        </button>
+                      </Link>
                     </td>
                     <td className="px-4 py-3">
-                      <a href="/SupportTicket2">
-                      <button className="p-1 border rounded hover:bg-gray-100">
-                    <LuPencil />
-                      </button></a>
+                      <Link to="/DashboardonsitePageFirst">
+                        <button className="p-1 border rounded hover:bg-gray-100">
+                          <LuPencil />
+                        </button>
+                      </Link>
                     </td>
                   </tr>
 
@@ -67,15 +68,18 @@ const Dashboard = () => {
                       </div>
                     </td>
                     <td className="pt-[20px]">
-                      <span className="bg-[#629C44] w-[120px] leading-8 text-white px-7 rounded-md text-xs block text-center">
-                        On-site Technician
-                      </span>
+                       <Link to="/DashboardOnsiteTechnincSecond">
+                        <button className="bg-[#629C44] w-[120px] leading-8 text-white px-7  rounded-md text-xs block text-center">
+                          On-site Technician
+                        </button>
+                      </Link>
                     </td>
                     <td className="px-4 py-3">
-                    <a href="/SupportTicket2">
-                      <button className="p-1 border rounded hover:bg-gray-100">
-                    <LuPencil />
-                      </button></a>
+                      <Link to="/DashboardOnsiteTechnincSecond">
+                        <button className="p-1 border rounded hover:bg-gray-100">
+                          <LuPencil />
+                        </button>
+                      </Link>
                     </td>
                   </tr>
 
@@ -92,15 +96,18 @@ const Dashboard = () => {
                       </div>
                     </td>
                     <td className="">
-                      <span className="bg-yellow-400 w-[80px] text-white  py-2 rounded-md text-10  block text-center">
-                        Working
-                      </span>
+                      <Link to="/DashboardWorking">
+                        <button className="bg-yellow-400 w-[80px] text-white  py-2 rounded-md text-10  block text-center">
+                          Working
+                        </button>
+                      </Link>
                     </td>
                     <td className="px-4 py-3">
-                    <a href="/SupportTicket2">
-                      <button className="p-1 border rounded hover:bg-gray-100">
-                    <LuPencil />
-                      </button></a>
+                      <Link to="/DashboardWorking">
+                        <button className="p-1 border rounded hover:bg-gray-100">
+                          <LuPencil />
+                        </button>
+                      </Link>
                     </td>
                   </tr>
 
@@ -117,15 +124,18 @@ const Dashboard = () => {
                       </div>
                     </td>
                     <td className=" ">
-                      <span className="bg-yellow-400 w-[50px] text-white px-2 py-1 rounded-md text-10 block text-center">
-                        Open
-                      </span>
+                      <Link to="/DashboardOpen">
+                        <span className="bg-yellow-400 w-[50px] text-white px-2 py-1 rounded-md text-10 block text-center">
+                          Open
+                        </span>
+                      </Link>
                     </td>
                     <td className="px-4 py-3">
-                    <a href="/SupportTicket2">
-                      <button className="p-1 border rounded hover:bg-gray-100">
-                    <LuPencil />
-                      </button></a>
+                      <Link to="/DashboardOpen">
+                        <button className="p-1 border rounded hover:bg-gray-100">
+                          <LuPencil />
+                        </button>
+                      </Link>
                     </td>
                   </tr>
                 </tbody>

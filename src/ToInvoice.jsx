@@ -6,7 +6,7 @@ const ToInvoice = () => {
   const [activeTab, setActiveTab] = useState("To Invoice");
 
   return (
-    <div className="mt-[10%] w-[92%]">
+    <div className="mt-[10%] w-[96%] pl-10">
      
 
      <div className="flex items-center justify-between">

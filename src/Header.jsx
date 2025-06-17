@@ -5,34 +5,38 @@ import { MdLogout } from "react-icons/md";
 
 const Header = () => {
   return (
-    <>
-      <div className="bg-[#272d34] flex items-center gap-[23%] px-[20px] text-white justify-center p-2 f  fixed top-[0px] w-[100%]">
-        <div className="w-[7%] ">
-          <img src={Logo} alt="" className="w-full h-full" />
+    <header className="bg-[#272d34] fixed top-0 left-0 w-full z-50 px-4 py-2">
+      <div className=" mx-auto flex items-center justify-between">
+       
+        <div className="w-20">
+          <img src={Logo} alt="Logo" className="w-full h-auto" />
         </div>
-        <div className="ml-[20px]">
-          <IoIosSearch className="text-white text-2xl absolute top-[20px] ml-2 " />
+
+       
+        <div className="relative hidden sm:block">
+          <IoIosSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl" />
           <input
             type="text"
-            className="bg-[#2a3f50] w-[400px] py-[6px]  px-[30px] rounded-[7px]"
+            placeholder="Search..."
+            className="bg-[#2a3f50] text-white pl-10 pr-4 py-2 rounded-md w-[250px] sm:w-[300px] lg:w-[400px]"
           />
         </div>
-        <div className=" text-[15px] hidden md:block ">
-      <div className="flex items-center  gap-3.5 justify-center">
-            <span className="text-white">
-            <h3>Welcome back,Clark Kelly!</h3>
-          </span>
-          <a href="">Logout</a>
-          <MdLogout />
-      </div>
+
+      
+        <div className="hidden md:flex items-center gap-4 text-white">
+          <h3 className="text-sm font-medium">Welcome back, Clark Kelly!</h3>
+          <button className="flex items-center gap-1 hover:text-gray-300">
+            <span className="text-sm">Logout</span>
+            <MdLogout className="text-lg" />
+          </button>
         </div>
 
-        <div className="md:hidden text-black p-1 rounded-xl text-3xl bg-white">
-            <a href="#">&#8801;</a>
-
+      
+        <div className="md:hidden bg-white text-black p-2 rounded-lg text-2xl">
+          <button aria-label="Menu">&#8801;</button>
         </div>
       </div>
-    </>
+    </header>
   );
 };
 
