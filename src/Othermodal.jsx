@@ -24,11 +24,11 @@ function Othermodal({ onClose }) {
   };
 
   return ReactDOM.createPortal(
-    <div className="fixed inset-0  bg-black/80 z-50 flex items-center justify-center">
+    <div className="fixed inset-0  backdrop-blur-sm z-50 flex items-center justify-center">
       <div className="bg-white w-[40%] p-4 rounded-lg shadow-lg relative ">
         <div className="flex justify-between items-center   ">
           <h2 className="text-xl font-bold">Add User</h2>
-          <button onClick={onClose} className="text-gray-600 text-2xl hover:text-black">
+          <button onClick={onClose} className=" text-3xl text-black">
             <RxCross2 />
           </button>
         </div>

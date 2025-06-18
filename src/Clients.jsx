@@ -17,7 +17,7 @@ function Clients() {
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-2xl font-semibold">Clients</h1>
-        <button className="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded font-medium" onClick={openModal}>
+        <button className="bg-sky-500 hover:bg-sky-600 rounded text-white px-4 py-2 mt-5 font-medium text-xs" onClick={openModal}>
           + Add Client
         </button>
 
@@ -106,18 +106,18 @@ function Clients() {
           <table className="min-w-full bg-white">
             {/* Table Head */}
             <thead className="bg-[#dff6ff] text-blue-900">
-              <tr>
-                <th className="px-6 py-3 text-left font-semibold text-gray-800 w-[25%]">
+              <tr className="">
+                <th className="px-6 py-3 text-left font-semibold bg-sky-100 text-[#254a9c] w-[25%]">
                   Company Name
                 </th>
-                <th className="px-6 py-3 text-left font-semibold text-gray-800 w-[25%]">
+                <th className="px-6 py-3 text-left font-semibold bg-sky-100 text-[#254a9c] w-[25%]">
                   <div className="flex items-center gap-2">
                     <FaLongArrowAltDown />
                     <MdNetworkCell />
                     Site
                   </div>
                 </th>
-                <th className="px-6 py-3 text-left font-semibold text-gray-800 w-[25%]">
+                <th className="px-6 py-3 text-left font-semibold bg-sky-100 text-[#254a9c] w-[25%]">
                   No. of Asset
                 </th>
                 <th className="px-6 py-3 text-left font-semibold text-gray-800 w-[10%]"></th>

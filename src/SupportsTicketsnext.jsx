@@ -13,7 +13,7 @@ import { FiArrowRight } from "react-icons/fi";
 import ResolveTicketModal from "./ResolveTicketModal";
 
 
-const DashboardOpen = () => {
+const SupportTicketNext = () => {
     const [activeTab, setActiveTab] = useState("asset");
     const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -26,16 +26,14 @@ const DashboardOpen = () => {
 
           <div>
             <h1 className="text-2xl font-semibold">Support Ticket #10008</h1>
-               <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500">
               Created: May 04, 2025 : 03:01pm Claimed by:
               <span className="text-blue-500 border-b hover:underline cursor-pointer">
                 Edit
               </span>
             </p>
-         
           </div>
         </div>
-        
         <div className="flex gap-4">
           <button className="flex items-center gap-2 border border-gray-400 px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
             <FiArchive />
@@ -47,7 +45,6 @@ const DashboardOpen = () => {
           </button>
         </div>
       </div>
-      
 
       <div className="flex relative w-[98%] mb-4.5 justify-between items-center">
         <div className="flex-1 py-2 px-4  bg-blue-500 text-white rounded-l-lg text-center font-semibold">
@@ -62,7 +59,7 @@ const DashboardOpen = () => {
           On-site Technician
         </div>
         <BiSolidRightArrow className="absolute left-[824px] text-gray-300 text-5xl" />
-        <button className="flex-1 py-2 px-4 bg-gray-400 text-gray-600 cursor-pointer rounded-r-lg text-center"  onClick={() => setIsModalOpen(true)}>
+        <button className="flex-1 py-2 px-4 bg-gray-400 text-gray-600 rounded-r-lg text-center"  onClick={() => setIsModalOpen(true)}>
           Resolved
         </button>
       </div>
@@ -357,4 +354,4 @@ const DashboardOpen = () => {
   );
 };
 
-export default DashboardOpen;
+export default SupportTicketNext;

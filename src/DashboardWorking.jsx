@@ -1,228 +1,326 @@
 import React, { useState } from "react";
 import ResolveTicketModal from "./ResolveTicketModal";
+import { Link } from "react-router-dom";
+import { HiOutlineArrowLeft } from "react-icons/hi";
+import { FiPlus, FiFlag, FiTrash2 } from "react-icons/fi";
+import { FaPlay } from "react-icons/fa";
+import { FaSquare } from "react-icons/fa6";
+import { FiPhone, FiMail, FiMessageSquare } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
+import { LuUpload } from "react-icons/lu";
+import { FiArchive, FiClipboard } from "react-icons/fi";
+import { BiSolidRightArrow } from "react-icons/bi";
 
-function DashboardWorking() {
+function DashboardonsitePageSecond() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("asset");
 
   return (
     <div className="p-6 text-sm font-sans mt-24 bg-gray-50 min-h-screen">
-      {/* Header Section */}
       <div className="mb-4 flex justify-between items-center">
         <div>
-          <h1 className="text-xl font-bold">Support Ticket #10002</h1>
-          <p className="text-gray-500 text-xs">
-            Created September 24, 2014 - 01:04am | Claimed by Clark Kelly{" "}
-            <a className="text-blue-500 cursor-pointer">Edit</a>
+          <div className="flex items-center gap-3">
+            <div>
+              <Link to="/">
+                <HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" />
+              </Link>
+            </div>
+            <div>
+              <h1 className="text-xl font-bold">Support Ticket #10002</h1>
+            </div>
+          </div>
+          <p className="text-gray-500 text-xs pt-2 pb-6">
+            Created: September 24, 2024 : 01:04pm | Claimed by: Clark Kelly,{" "}
+            <span className="text-blue-500">Edit</span>
           </p>
         </div>
-        <div className="flex space-x-2">
-          <button className="border px-3 py-1 rounded text-sm">Archive</button>
-          <button className="border px-3 py-1 rounded text-sm">
+        <div className="flex gap-4">
+          <button className="flex items-center gap-2 px-4 py-2 border border-gray-400 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+            <FiArchive />
+            Archive
+          </button>
+          <button className="flex items-center gap-2 px-4 py-2 border border-gray-400 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+            <FiClipboard />
             Ticket Log
           </button>
         </div>
       </div>
 
-      {/* Status Progress Bar */}
-      <div className="flex mb-6">
-        <div className="flex-1 text-center bg-gray-200 p-2 rounded-l">Open</div>
-        <div className="flex-1 text-center bg-yellow-300 p-2 font-medium">
+      <div className="flex relative w-[100%] mb-6 p-1 justify-between items-center">
+        <div className="flex-1 py-2.5 px-4  bg-gray-200 text-gray-900 rounded-l-lg text-center font-semibold">
+          Open
+        </div>
+        <BiSolidRightArrow className="absolute left-[269px] text-gray-200 text-5xl" />
+        <div className="flex-1 py-2.5 px-4 bg-yellow-400 text-gray-900 text-center">
           Working
         </div>
-        <div className="flex-1 text-center bg-gray-200 p-2">
-          Onsite Technician
+        <BiSolidRightArrow className="absolute left-[545px] text-yellow-400 text-5xl" />
+        <div className="flex-1 py-2.5 px-4 bg-gray-300 text-gray-900 text-center">
+          On-site Technician
         </div>
-        <div
-          className="flex-1 text-center bg-gray-200 p-2 rounded-r cursor-pointer hover:bg-gray-300 transition"
+        <BiSolidRightArrow className="absolute left-[820px] text-gray-300 text-5xl" />
+        <button
+          className="flex-1 py-2.5 px-4 bg-gray-200 cursor-pointer text-gray-900 rounded-r-lg text-center"
           onClick={() => setIsModalOpen(true)}
         >
           Resolved
-        </div>
+        </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Left Section */}
-        <div>
-          {/* Client Info Card */}
-          <div className="bg-white shadow-sm p-4 rounded mb-6">
-            <h2 className="font-semibold text-lg mb-2">Sterling Infotech</h2>
-            <p>Client Site - 254/610 Alquans Rd</p>
-            <p>Paul Jose</p>
-            <p>61402872296</p>
-            <p>info@sterlinginfotech.com</p>
-            <a href="#" className="text-blue-500 text-xs">
-              Edit Contact
-            </a>
+      <div className="grid grid-cols-2 gap-6">
+        <div className="max-w-3xl mx-auto p-6 w-[100%] h-[97%]  border border-gray-300 rounded-xl space-y-6">
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-xl font-semibold">Sterling Infotech</h1>
+              <p className="text-sm text-gray-600">
+                Client Site - 254/610 Alquans Rd
+                <br />
+                Paul Jose
+                <br />
+                61402872296
+                <br />
+                info@strelinginfotech.com
+              </p>
+              <Link to="#" className="text-blue-500 text-sm mt-1 inline-block">
+                Edit Contact
+              </Link>
+            </div>
           </div>
 
-          {/* Details Section */}
-          <div className="text-xs space-y-2 mb-6">
-            <div className="flex justify-between border-b pb-1">
-              <span className="text-gray-600">Site</span>
-              <span className="text-blue-500 cursor-pointer">Client Site</span>
+          <hr className="text-gray-300" />
+
+          <div className="space-y-5 text-sm">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Sites</span>
+              <span className="text-black border-b font-medium">
+                Client Site
+              </span>
             </div>
-            <div className="flex justify-between border-b pb-1">
-              <span className="text-gray-600">Asset</span>
-              <span className="text-black font-medium">024541</span>
+            <hr className="text-gray-300" />
+
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Asset</span>
+              <span className="text-black border-b font-medium">
+                test - #34534
+              </span>
             </div>
-            <div className="border-b pb-1">
-              <span className="text-gray-600">Warranty</span>
-              <div className="flex gap-2 mt-1">
-                <span className="bg-green-400 text-white px-2 py-1 rounded">
+            <hr className="text-gray-300" />
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Warranty</span>
+              <div className="flex gap-2">
+                <span className="bg-green-500 px-3 py-1 text-xs rounded font-semibold text-white">
                   WARRANTY
                 </span>
-                <span className="bg-gray-200 px-2 py-1 rounded">
+                <span className="bg-gray-300 px-3 py-1 text-xs rounded font-semibold text-black">
                   OUT OF WARRANTY
                 </span>
-                <span className="bg-gray-200 px-2 py-1 rounded">FOC</span>
+                <span className="bg-gray-200 px-3 py-1 text-xs rounded font-semibold text-black">
+                  FOC
+                </span>
               </div>
             </div>
-            <div className="border-b pb-1">
-              <span className="text-gray-600">Parts</span>
-              <div className="flex gap-2 mt-1">
-                <span className="bg-gray-200 px-2 py-1 rounded">
+            <hr className="text-gray-300" />
+
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">Parts</span>
+              <div className="flex gap-2">
+                <span className="bg-gray-200 px-3 py-1 text-xs rounded font-semibold text-black">
                   PARTS REQUIRED
                 </span>
-                <span className="bg-gray-200 px-2 py-1 rounded">NO PARTS</span>
+                <span className="bg-gray-200 px-3 py-1 text-xs rounded font-semibold text-black">
+                  NO PARTS
+                </span>
               </div>
+            </div>
+            <hr className="text-gray-300" />
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold mb-2">Title</h3>
+            <div className="flex items-center justify-between border px-4 py-2 rounded-md text-sm text-gray-700">
+              Event - 25th Aug
+              <FiChevronDown />
             </div>
           </div>
 
-          {/* Title and Description */}
-          <div className="mb-6">
-            <label className="block text-xs font-medium text-gray-700">
-              Title
-            </label>
-            <input
-              type="text"
-              value="Event - 25th Aug"
-              className="w-full border mt-1 p-2 rounded"
-              readOnly
-            />
-            <label className="block text-xs font-medium text-gray-700 mt-3">
-              Description
-            </label>
-            <textarea
-              className="w-full border mt-1 p-2 rounded"
-              rows="3"
-              readOnly
+          <div>
+            <h3 className="text-sm font-semibold mb-2">Description</h3>
+            <p className="text-sm text-gray-700">test</p>
+            <a
+              href="#"
+              className="text-blue-500  border-b text-sm mt-1 inline-block"
             >
-              text
-            </textarea>
-            <a href="#" className="text-blue-500 text-xs">
               Edit Description
             </a>
           </div>
-
-          {/* Attachments */}
-          <div className="mb-4">
-            <p className="font-semibold mb-2">Attachments</p>
-            <div className="border p-4 rounded text-center text-gray-400 text-xs">
-              No files uploaded
+          <div className=" pt-4">
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="text-sm font-semibold text-gray-800">
+                Attachments
+              </h3>
+              <button className="text-gray-800 hover:text-blue-500">
+                <LuUpload className="w-4 h-4" />
+              </button>
             </div>
+            <hr className="border-gray-200 mb-19" />
           </div>
         </div>
 
-        {/* Right Section */}
         <div>
-          {/* Timer & Technician */}
-          <div className="bg-white shadow-sm p-4 rounded mb-6">
-            <div className="flex justify-between mb-3">
+          <div className="max-w-xl p-6 border border-gray-300 rounded-xl  bg-white">
+            <div className="flex items-center justify-between">
               <div>
-                <p className="font-semibold">Total Time</p>
-                <p className="text-green-600">0hrs 0mins</p>
-                <a href="#" className="text-blue-500 text-xs">
+                <h2 className="text-md font-semibold text-gray-800">
+                  Total Time
+                </h2>
+                <p className="text-green-500 text-2xl font-bold mt-1">
+                  0hrs 0mins
+                </p>
+                <Link
+                  to="#"
+                  className="text-sm text-blue-500 underline mt-1 inline-block"
+                >
                   View Time
-                </a>
+                </Link>
               </div>
-              <div className="flex gap-2 items-start">
-                <button className="border px-3 py-1 rounded text-sm">
+
+              <div className="flex items-center gap-3 mt-4">
+                <button className="flex items-center gap-1 px-3 py-2 border border-gray-400 rounded-md text-sm font-medium text-gray-800 hover:bg-gray-100">
+                  <FaPlay className="text-black text-lg" />
                   Start Timer
                 </button>
-                <button className="border px-3 py-1 rounded text-sm">
+                <button className="p-2 border rounded-md border-gray-400 hover:bg-gray-100">
+                  <FaSquare className="text-lg text-gray-400" />
+                </button>
+                <button className="flex items-center gap-1 px-3 border-gray-400 py-2 border rounded-md text-sm font-medium text-gray-800 hover:bg-gray-100">
+                  <FiPlus className="text-lg" />
                   Add Time
                 </button>
               </div>
             </div>
-            <p className="font-semibold">Technicians</p>
-            <p>User1</p>
-            <div className="flex gap-2 mt-2">
-              <button className="border px-3 py-1 rounded text-sm">
-                Add Technician
-              </button>
-              <button className="border px-3 py-1 rounded text-sm">
-                Onsite Technician Required
-              </button>
+
+            <div className="mt-20 flex items-center justify-between">
+              <div>
+                {" "}
+                <h2 className="text-md font-semibold text-gray-800 mb-2">
+                  Technicians
+                </h2>
+              </div>
+              <div className="flex items-center gap-3">
+                <button className="flex items-center border-gray-400 gap-1 px-3 py-2 border rounded-md text-sm font-medium hover:bg-gray-100">
+                  <FiPlus />
+                  Add Technician
+                </button>
+                <button className="flex items-center gap-2 px-3 py-2 bg-[#f07c00] text-white rounded-md text-sm font-medium hover:bg-orange-600">
+                  <FiFlag />
+                  On-site Technician Required
+                </button>
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="flex items-center justify-between border-b border-gray-300 mb-10 py-7">
+                <span className="text-gray-800">User1</span>
+                <button className="text-gray-500 text-xl hover:text-red-600">
+                  <FiTrash2 />
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Comments/Updates */}
-          <div className="bg-white shadow-sm p-4 rounded">
-            <p className="font-semibold mb-2">Comments / Updates</p>
+          <div className="border border-gray-300 rounded-xl mt-8 p-5 bg-white space-y-4">
+            <h2 className="text-md font-semibold">Comments / Updates</h2>
+
             <textarea
+              className="w-full h-24 border border-gray-300 rounded-md p-3 text-sm text-black resize-none focus:outline-none"
               placeholder="Start typing..."
-              className="w-full border rounded p-2 h-24 mb-2"
-            />
-            <div className="mb-4">
-              <p className="text-xs text-gray-500 mb-1">Save As:</p>
-              <div className="flex gap-2">
-                <button className="border px-3 py-1 rounded text-sm">
-                  Call
-                </button>
-                <button className="border px-3 py-1 rounded text-sm">
-                  Message
-                </button>
-                <button className="border px-3 py-1 rounded text-sm">
-                  Email
-                </button>
-              </div>
+            ></textarea>
+
+            <h1>Save As: </h1>
+            <div className="flex items-center gap-3">
+              <button className="p-2.5 border   border-gray-300 rounded-md hover:bg-gray-100">
+                <FiPhone />
+              </button>
+              <button className="p-2.5 border  border-gray-300  rounded-md hover:bg-gray-100">
+                <FiMail />
+              </button>
+              <button className="p-2.5 border  border-gray-300  rounded-md hover:bg-gray-100">
+                <FiMessageSquare />
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Ticket History Table */}
-      <div className="mt-10 bg-white p-4 rounded shadow-sm">
-        <h3 className="font-semibold mb-2">Ticket History</h3>
-        <table className="w-full text-left text-xs border">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="p-2 border">Asset</th>
-              <th className="p-2 border">Site</th>
-              <th className="p-2 border">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="p-2 border">Event - 25th Aug</td>
-              <td className="p-2 border">September 16, 2014</td>
-              <td className="p-2 border">
-                <span className="bg-yellow-300 px-2 py-1 rounded">Open</span>
-              </td>
-            </tr>
-            <tr>
-              <td className="p-2 border">Event - 25th Aug</td>
-              <td className="p-2 border">September 24, 2014</td>
-              <td className="p-2 border">
-                <span className="bg-green-400 text-white px-2 py-1 rounded">
-                  Onsite Technician
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td className="p-2 border"></td>
-              <td className="p-2 border">May 14, 2015</td>
-              <td className="p-2 border">
-                <span className="bg-yellow-300 px-2 py-1 rounded">Open</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="border border-gray-300 rounded-xl p-5 w-[550px] bg-white max-w-3xl space-y-5">
+        <h2 className="text-md font-semibold">Ticket History</h2>
+
+        <div className="flex gap-6 border-b">
+          <button
+            className={`pb-2 text-sm font-medium ${
+              activeTab === "asset"
+                ? "text-blue-500 border-b-2 border-blue-500"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("asset")}
+          >
+            Asset
+          </button>
+          <button
+            className={`pb-2 text-sm font-medium ${
+              activeTab === "site"
+                ? "text-blue-500  border-b-2 border-blue-500"
+                : "text-gray-500 "
+            }`}
+            onClick={() => setActiveTab("site")}
+          >
+            Site
+          </button>
+        </div>
+
+        <div className="flex items-center justify-between py-3 border-b border-gray-300">
+          <div className="text-sm text-gray-700">Event - 25th Aug</div>
+          <div className="text-sm text-gray-700">September 16, 2014</div>
+          <div className="text-sm font-bold text-gray-900">CK</div>
+          <div className="bg-yellow-400 text-xs font-medium px-3 py-1 rounded text-white">
+            Open
+          </div>
+          <button className="p-1.5 border rounded-md">
+            <FiArrowRight className="text-gray-700" />
+          </button>
+        </div>
+
+        <div className="flex items-center justify-between py-3 border-b border-gray-300">
+          <div className="text-sm text-gray-700">Event - 25th Aug</div>
+          <div className="text-sm text-gray-700">September 24, 2014</div>
+          <div className="text-sm font-bold text-gray-900">CK</div>
+          <div className="bg-green-600 text-xs font-medium px-3 py-1 rounded text-white">
+            On-Site Technician
+          </div>
+          <button className="p-1.5 border rounded-md">
+            <FiArrowRight className="text-gray-700" />
+          </button>
+        </div>
+
+        <div className="flex items-center justify-center gap-5 py-3 border-b border-gray-300">
+          <div className="text-sm text-gray-700 w-13"></div>
+          <div className="text-sm ml-4 text-gray-700 ">May 14, 2015</div>
+          <div className="text-sm font-bold text-gray-900 mr-40"></div>
+          <div className="bg-yellow-400 text-xs font-medium px-3 py-1 rounded text-white">
+            Open
+          </div>
+          <button className="p-1.5 border ml-8  rounded-md">
+            <FiArrowRight className="text-gray-700 " />
+          </button>
+        </div>
       </div>
 
-      <ResolveTicketModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ResolveTicketModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }
 
-export default DashboardWorking;
+export default DashboardonsitePageSecond;

@@ -14,7 +14,7 @@ const Technicians = () => {
       <div className="w-full max-w-7xl">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-gray-800">Technicians</h1>
-          <button className="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-md" onClick={openModal}>
+          <button className="bg-sky-500 hover:bg-sky-600 rounded text-white px-4 py-2 mt-5 font-medium text-xs" onClick={openModal}>
             + Add Technician
           </button>
         </div>
@@ -32,7 +32,7 @@ const Technicians = () => {
             <div className="flex justify-between items-center border-b pb-2 mb-5">
               <h2 className="text-xl font-bold">Add Technician</h2>
               <button
-                className="text-gray-900 text-[30px] hover:text-gray-700"
+                className="text-gray-900 text-[45px] hover:text-gray-700"
                 onClick={closeModal}
               >
                 &times;
@@ -111,13 +111,12 @@ const Technicians = () => {
               </div>
             </form>
           </div>
-        </div>
-      )}
+  </div>)}
 
         <div className="rounded-md border border-gray-200 overflow-x-auto bg-white p-6">
           <table className="w-full text-sm text-left text-gray-700">
             <thead>
-              <tr className="bg-blue-200 text-gray-800">
+              <tr className="bg-sky-100 text-[#254a9c]">
                 <th className="px-6 py-3">Company</th>
                 <th className="px-6 py-3">Tags</th>
                 <th className="px-6 py-3">Email</th>

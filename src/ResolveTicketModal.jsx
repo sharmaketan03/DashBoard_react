@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 const ResolveTicketModal = ({ isOpen, onClose }) => {
   const [comment, setComment] = useState("");
@@ -11,14 +12,20 @@ const ResolveTicketModal = ({ isOpen, onClose }) => {
  <div className="fixed inset-0 bg-white/10 backdrop-blur-sm flex justify-center items-center z-50 p-4">
 
       <div className="bg-white rounded-md shadow-md w-full max-w-lg p-6 relative">
-        <button
-          className="absolute top-4 right-4 text-gray-500 hover:text-black text-xl"
-          onClick={onClose}
-        >
-          &times;
-        </button>
 
-        <h2 className="text-xl font-semibold mb-4">Resolve Ticket</h2>
+      <div className="flex items-center justify-between">
+          <div>
+          <h2 className="text-xl font-semibold mb-4">Resolve Ticket</h2>
+        </div>
+      
+        <div>
+          <RxCross2  className=" text-black text-3xl mb-3"
+          onClick={onClose} />
+        </div>
+       
+      </div>
+
+        
 
         <label htmlFor="comments" className="block text-sm font-medium mb-1">
           Comments <span className="text-red-500">*</span>

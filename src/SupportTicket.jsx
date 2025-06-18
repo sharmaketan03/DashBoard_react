@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiArchive, FiClipboard } from "react-icons/fi";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { BiSolidRightArrow } from "react-icons/bi";
+import { FiChevronDown } from "react-icons/fi";
+import { FaPlay } from "react-icons/fa";
+import { LuUpload } from "react-icons/lu";
+import { FaSquare } from "react-icons/fa6";
+import { FiPlus, FiFlag, FiTrash2 } from "react-icons/fi";
+import { FiPhone, FiMail, FiMessageSquare } from "react-icons/fi";
+import ResolveTicketModal from "./ResolveTicketModal";
 
 const SupportTicket = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className=" bg-white shadow-md rounded-lg w-[98%] mx-auto mt-[10%] ">
+    <div className="   w-[98%] mx-auto mt-[10%] ">
       {/* Header Section */}
-      <div className="flex justify-between items-center border-b pb-4 mb-6">
+      <div className="flex justify-between items-center  pb-4 mb-6">
         <div className="flex items-center gap-2">
-          <Link to="/support"><HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" /></Link>
-  
+          <Link to="/support">
+            <HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" />
+          </Link>
+
           <div>
             <h1 className="text-2xl font-semibold">Support Ticket #10010</h1>
             <p className="text-sm text-gray-500">
@@ -22,11 +33,11 @@ const SupportTicket = () => {
           </div>
         </div>
         <div className="flex gap-4">
-          <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+          <button className="flex items-center gap-2 px-4 py-2 border border-gray-400 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
             <FiArchive />
             Archive
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+          <button className="flex items-center gap-2 px-4 py-2 border border-gray-400 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
             <FiClipboard />
             Ticket Log
           </button>
@@ -34,138 +45,233 @@ const SupportTicket = () => {
       </div>
 
       {/* Status Bar */}
-      <div className="flex justify-between items-center">
-        <div
-          className="flex-1 py-2 px-4 bg-blue-500 text-white rounded-l-lg text-center font-semibold"
-        >
+      <div className="flex relative w-[98%] mb-4.5 justify-between items-center">
+        <div className="flex-1 py-2 px-4  bg-blue-500 text-white rounded-l-lg text-center font-semibold">
           Open
         </div>
-        <div
-          className="flex-1 py-2 px-4 bg-gray-200 text-gray-600 text-center"
-        >
+        <BiSolidRightArrow className="absolute left-[267px] text-blue-500 text-5xl" />
+        <div className="flex-1 py-2 px-4 bg-gray-200 text-gray-600 text-center">
           Working
         </div>
-        <div
-          className="flex-1 py-2 px-4 bg-gray-300 text-gray-600 text-center"
-        >
+        <BiSolidRightArrow className="absolute left-[547px] text-gray-200 text-5xl" />
+        <div className="flex-1 py-2 px-4 bg-gray-300 text-gray-600 text-center">
           On-site Technician
         </div>
-        <button className="flex-1 py-2 px-4 bg-gray-400 text-gray-600 rounded-r-lg text-center" >
+        <BiSolidRightArrow className="absolute left-[824px] text-gray-300 text-5xl" />
+        <button className="flex-1 py-2 px-4 bg-gray-400 text-gray-600 rounded-r-lg text-center" onClick={() => setIsModalOpen(true)}>
           Resolved
         </button>
       </div>
-      <div className="  min-h-screen w-[98%]">
-      <div className="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md">
-       
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold">Job Client Add</h1>
-          <p className="text-sm text-gray-500">TSC - total</p>
-          <a href="#" className="text-blue-500 hover:underline text-sm">
-            Edit Contact
-          </a>
-        </div>
-
-       
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-     
-          <div className="col-span-2 space-y-6">
-            {/* Job Details */}
-            <div className="space-y-4">
-              <div className="flex justify-between">
-                <span className="font-medium">Sites</span>
-                <a href="#" className="text-blue-500 hover:underline">
-                  TSC
-                </a>
+      <div className="  min-h-screen w-[98%] ">
+        <div className="grid grid-cols-2 gap-6">
+          <div className="max-w-3xl mx-auto p-6 w-[100%] h-[97%]  border border-gray-300 rounded-xl space-y-6">
+            {/* Header */}
+            <div className="flex justify-between items-start">
+              <div>
+                <h1 className="text-xl font-semibold">Job client add</h1>
+                <p className="text-sm text-gray-600 py-5">TSC-total</p>
+                <Link
+                  to="#"
+                  className="text-blue-500 border-b text-sm mt-1 inline-block"
+                >
+                  Edit Contact
+                </Link>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Asset</span>
-                <a href="#" className="text-blue-500 hover:underline">
-                  Asset 1 - 2343223
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="font-medium">Warranty</span>
-                <button className="px-4 py-1 bg-gray-100 text-sm rounded">WARRANTY</button>
-                <button className="px-4 py-1 bg-gray-100 text-sm rounded">OUT OF WARRANTY</button>
-                <button className="px-4 py-1 bg-blue-500 text-white text-sm rounded">FOC</button>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="font-medium">Parts</span>
-                <button className="px-4 py-1 bg-gray-100 text-sm rounded">PARTS REQUIRED</button>
-                <button className="px-4 py-1 bg-gray-100 text-sm rounded">NO PARTS</button>
-              </div>
+              <Link to="#" className="text-blue-500 border-b text-sm mt-1">
+                Edit Ticket
+              </Link>
             </div>
 
-            {/* Dropdown */}
-            <div>
-              <label className="block text-sm font-medium mb-1">Title</label>
-              <select className="w-full border-gray-300 rounded px-3 py-2">
-                <option>Select</option>
-              </select>
-            </div>
+            <hr className="text-gray-300" />
 
-            {/* Description */}
-            <div>
-              <label className="block text-sm font-medium mb-1">Description</label>
-              <a href="#" className="text-blue-500 hover:underline text-sm">
-                Click here to add a description
-              </a>
-            </div>
-
-            {/* Attachments */}
-            <div>
-              <label className="block text-sm font-medium mb-1">Attachments</label>
-              <div className="w-full border-gray-300 border rounded px-3 py-2">
-                <p className="text-gray-400 text-sm">No attachments added.</p>
+            {/* Details Rows */}
+            <div className="space-y-5 text-sm">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-500">Sites</span>
+                <span className="text-black border-b font-medium">TSC</span>
               </div>
+              <hr className="text-gray-300" />
+
+              <div className="flex justify-between items-center">
+                <span className="text-gray-500">Asset</span>
+                <span className="text-black border-b font-medium">
+                  Asset 1-2343223
+                </span>
+              </div>
+              <hr className="text-gray-300" />
+              <div className="flex justify-between items-center">
+                <span className="text-gray-500">Warranty</span>
+                <div className="flex gap-2">
+                  <span className="bg-gray-200 px-3 py-1 text-xs rounded font-semibold text-white">
+                    WARRANTY
+                  </span>
+                  <span className="bg-gray-200 px-3 py-1 text-xs rounded font-semibold text-white">
+                    OUT OF WARRANTY
+                  </span>
+                  <span className="bg-blue-400 px-3 py-1 text-xs rounded font-semibold text-white">
+                    FOC
+                  </span>
+                </div>
+              </div>
+              <hr className="text-gray-300" />
+
+              <div className="flex justify-between items-center">
+                <span className="text-gray-500">Parts</span>
+                <div className="flex gap-2">
+                  <span className="bg-green-700 px-3 py-1 text-xs rounded font-semibold text-white">
+                    PARTS REQUIRED
+                  </span>
+                  <span className="bg-gray-300 px-3 py-1 text-xs rounded font-semibold text-white">
+                    NO PARTS
+                  </span>
+                </div>
+              </div>
+              <hr className="text-gray-300" />
+            </div>
+
+            {/* Title Section */}
+            <div>
+              <h3 className="text-sm font-semibold mb-2">Title</h3>
+             <select name="" id="" className="flex items-center w-full justify-between border px-4 py-2 rounded-md text-sm text-gray-700">
+              <option value="">Select</option>
+              <option value="">Event-22th Aug</option>
+              <option value="">Event-25th Aug</option>
+             </select>
+            </div>
+
+            {/* Description Section */}
+            <div>
+              <h3 className="text-sm font-semibold mb-2">Description</h3>
+
+              <Link to="#" className=" text-sm mt-1 inline-block">
+                <span className="text-blue-500  border-b"> Click here</span> to
+                add a description
+              </Link>
+            </div>
+            <div className=" pt-4">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-sm font-semibold text-gray-800">
+                  Attachments
+                </h3>
+                <button className="text-gray-800 hover:text-blue-500">
+                  <LuUpload className="w-4 h-4" />
+                </button>
+              </div>
+              <hr className="border-gray-200" />
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="space-y-6">
-            {/* Total Time */}
-            <div className="p-4 bg-gray-100 rounded">
-              <h3 className="font-medium">Total Time</h3>
-              <p className="text-green-500 text-2xl">0hrs 0mins</p>
-              <a href="#" className="text-blue-500 hover:underline text-sm">
-                View Time
-              </a>
-              <div className="mt-2 flex gap-4">
-                <button className="px-4 py-2 bg-gray-200 rounded">Start Timer</button>
-                <button className="px-4 py-2 bg-gray-200 rounded">Add Time</button>
+          <div>
+            <div className="max-w-xl p-6 border h-[350px] border-gray-300 rounded-xl  bg-white">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-md font-semibold text-gray-800">
+                    Total Time
+                  </h2>
+                  <p className="text-green-500 text-2xl font-bold mt-1">
+                    0hrs 1mins
+                  </p>
+                  <Link
+                    to="#"
+                    className="text-sm text-blue-500 underline mt-1 inline-block"
+                  >
+                    View Time
+                  </Link>
+                </div>
+
+                <div className="flex items-center gap-3 mt-4">
+                  <button className="flex items-center gap-1 px-3 py-2 border border-gray-400  rounded-md text-sm font-medium text-gray-800 hover:bg-gray-100">
+                    <FaPlay className="text-black text-[10px]" />
+                    Start Timer
+                  </button>
+                  <button className="p-2 border border-gray-400 rounded-md hover:bg-gray-100">
+                    <FaSquare className="text-lg text-gray-400" />
+                  </button>
+                  <button className="flex items-center gap-1 border-gray-400 px-3 py-2 border rounded-md text-sm font-medium text-gray-800 hover:bg-gray-100">
+                    <FiPlus className="text-[15px]" />
+                    Add Time
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-20 flex items-center justify-between">
+                <div>
+                  {" "}
+                  <h2 className="text-md font-semibold text-gray-800 mb-2">
+                    Technicians
+                  </h2>
+                </div>
+                <div className="flex items-center gap-3">
+                  <button className="flex items-center gap-1  px-3 py-2 border border-gray-400 rounded-md text-sm font-medium hover:bg-gray-100">
+                    <FiPlus />
+                    Add Technician
+                  </button>
+                  <button className="flex items-center gap-2 px-3 py-2 border border-gray-400 hover:bg-gray-100 text-gray-700 rounded-md text-sm font-medium ">
+                    <FiFlag />
+                    On-site Technician Required
+                  </button>
+                </div>
+              </div>
+              <div className="mt-4">
+                <div className="flex items-center justify-between  border-gray-300 mb-10 py-7">
+                  <Link to="#" className=" text-sm mt-1 inline-block">
+                    <span className="text-blue-500  border-b"> Click here</span>{" "}
+                    to add a technician
+                  </Link>
+                </div>
               </div>
             </div>
 
-            {/* Technicians */}
-            <div className="p-4 bg-gray-100 rounded">
-              <h3 className="font-medium">Technicians</h3>
-              <button className="px-4 py-2 bg-blue-500 text-white rounded w-full">
-                + Add Technician
-              </button>
-              <a href="#" className="text-blue-500 hover:underline text-sm block mt-2">
-                On-site Technician Required
-              </a>
-            </div>
+            <div className="border border-gray-300 rounded-xl mt-8 p-5 bg-white space-y-4">
+              <h2 className="text-md font-semibold">Comments / Updates</h2>
 
-            {/* Comments */}
-            <div className="p-4 bg-gray-100 rounded">
-              <h3 className="font-medium">Comments / Updates</h3>
               <textarea
-                className="w-full border-gray-300 rounded mt-2 px-3 py-2"
+                className="w-full h-24 border border-gray-300 rounded-md p-3 text-sm text-black resize-none focus:outline-none"
                 placeholder="Start typing..."
               ></textarea>
-              <div className="mt-2 flex gap-4">
-                <button className="px-4 py-2 bg-gray-200 rounded">💬</button>
-                <button className="px-4 py-2 bg-gray-200 rounded">📧</button>
-                <button className="px-4 py-2 bg-gray-200 rounded">📎</button>
+
+              <h1>Save As: </h1>
+              <div className="flex items-center gap-3">
+                <button className="p-2.5 border   border-gray-300 rounded-md hover:bg-gray-100">
+                  <FiPhone />
+                </button>
+                <button className="p-2.5 border  border-gray-300  rounded-md hover:bg-gray-100">
+                  <FiMail />
+                </button>
+                <button className="p-2.5 border  border-gray-300  rounded-md hover:bg-gray-100">
+                  <FiMessageSquare />
+                </button>
               </div>
+
+              <div className="bg-blue-50 p-8 rounded-md  gap-1 ">
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-1 items-center">
+                    <FiMail className="text-[15px] text-blue-500" />
+                   
+                    <span className="text-xs text-blue-500 ml-2">
+              Sunday, May 18 2025 - 03:18PM
+                    </span>
+                  </div>
+                  <div className="text-xs text-blue-500  flex gap-3 cursor-pointer">
+                    <span>Edit</span>
+                    <span>Delete</span>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-700 mt-1">test</p>
+              </div>
+
+             
             </div>
+          </div>
+
+
+          <div  className="border border-gray-300 p-6 mb-30 rounded-xl">
+            <h2 className="font-bold text-[15px]">Ticket History</h2>
+            <p className="text-[13px] mt-5">There is no additional ticket history for this asset</p>
           </div>
         </div>
       </div>
-    </div>
-
-
+      <ResolveTicketModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

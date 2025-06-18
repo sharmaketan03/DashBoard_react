@@ -44,7 +44,7 @@ function Users() {
         <div className="border border-gray-300 rounded-lg p-5 mt-5 ">
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white">
-              <thead className="bg-[#dff6ff] text-sky-600">
+              <thead className="bg-sky-100 text-[#254a9c]">
                 <tr className="text-xs">
                   <th className=" px-4 py-2 text-left">Name</th>
                   <th className=" py-2 text-left">Email</th>

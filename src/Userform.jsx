@@ -24,7 +24,7 @@ function UserForm({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="fixed inset-0  backdrop-blur-sm flex items-center justify-center z-50">
       <div className="bg-white rounded-lg w-[600px] p-6 relative ">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-semibold">Edit User</h2>

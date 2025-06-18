@@ -9,8 +9,8 @@ const Resoursec = () => {
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold mb-6">Resources</h1>
 
-          <button className="flex items-center bg-blue-500 gap-3 px-2 py-4 rounded-lg text-white hover:bg-blue-300 w-[120px] text-[12px] ">
-            <GoPlus /> Add Client
+          <button className="bg-sky-500 flex items-center gap-2 hover:bg-sky-600 rounded text-white px-4 py-2 mt-5 font-medium text-xs" >
+            <GoPlus className="text-[18px]"/> Add Client
           </button>
         </div>
       </div>

@@ -35,7 +35,7 @@ function Support() {
   };
 
   return (
-    <div className=" mt-[50px] pt-[50px] w-[97%] ">
+    <div className=" mt-[50px] mb-20 pt-[50px] w-[97%] ">
       <div className="flex item-center justify-between">
         <h1 className="text-2xl font-bold mb-6">Support Tickets</h1>
 
@@ -318,7 +318,7 @@ function Support() {
                   </div>
 
                   <div className="flex gap-4  mt-6">
-                    <button type="submit" np>
+                    <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" >
                       Add Ticket
                     </button>
                     <button
@@ -381,19 +381,19 @@ function Support() {
       <div className="mt-[30px] my-8">
         <ul className="flex gap-[50px] text-[14px] py-2  border-b border-gray-300 mb-8 ml-4 font-md">
           <li>
-            <a href="">Unresolved</a>
+            <Link to="#">Unresolved</Link>
           </li>
           <li>
-            <a href="">Open</a>
+            <Link to="#">Open</Link>
           </li>
           <li>
-            <a href="">Working</a>
+            <Link to="#">Working</Link>
           </li>
           <li>
-            <a href="">On-site-Technician</a>
+            <Link to="#">On-site-Technician</Link>
           </li>
           <li>
-            <a href="">Resolved</a>
+            <Link to="#">Resolved</Link>
           </li>
         </ul>
       </div>
@@ -401,7 +401,7 @@ function Support() {
       <div className=" w-full">
         <table className="w-full border-collapse border border-gray-200">
           <thead>
-            <tr className="bg-blue-100 text-left text-[14px]">
+            <tr className="bg-sky-100 text-[#254a9c] text-left text-[14px]">
               <th className="px-4 py-2 border-b border-gray-300 ">
                 Ticket No.
               </th>
@@ -431,12 +431,8 @@ function Support() {
               <td className="px-4 py-2 p-[20px]"></td>
               <td className="px-4 py-2 p-[20px]">28 Days</td>
               <td className="px-4 py-2 flex gap-2 mt-[10px]">
-                <span className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center font-bold ">
-                  AJ
-                </span>
-                <span className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center font-bold p-[20px]">
-                  U
-                </span>
+              
+              
               </td>
               <td className="px-4 py-2">
                 <a href="">
@@ -596,9 +592,7 @@ function Support() {
               <td className="px-4 py-2 p-[20px]"></td>
               <td className="px-4 py-2 p-[20px]">Event - 25th Aug</td>
               <td className="px-4 py-2 flex gap-2 mt-[5px]">
-                <span className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center font-bold p-[20px]">
-                  AJ
-                </span>
+              
               </td>
               <td className="px-4 py-2">
                 <a href="">
@@ -615,7 +609,7 @@ function Support() {
                   <LuPencil />
                 </button>{" "}
                 <br />
-                <Link to="/SupportTicket">
+                <Link to="/SupportTicketNext">
                   <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
                     <FiArrowRight />
                   </button>
@@ -661,8 +655,8 @@ function Support() {
               <td className="px-4 py-2 p-[20px]">Sterling Infotech</td>
               <td className="px-4 py-2 p-[20px]">Sterling</td>
               <td className="px-4 py-2 p-[20px]">Testing1</td>
-              <td className="px-4 py-2 p-[20px]"></td>
-              <td className="px-4 py-2 p-[20px]">39 Days</td>
+              <td className="px-4 py-2 p-[20px]">Event - 25th Aug</td>
+              <td className="px-4 py-2 p-[20px]">268 Days</td>
               <td className="px-4 py-2 flex gap-2 mt-[5px]"></td>
               <td className="px-4 py-2">
                 <Link to="">
@@ -679,7 +673,7 @@ function Support() {
                   <LuPencil />
                 </button>{" "}
                 <br />
-                <Link to="/SupportTicket">
+                <Link to="/SupportTicketNext">
                   <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
                     <FiArrowRight />
                   </button>
@@ -694,23 +688,19 @@ function Support() {
               <td className="px-4 py-2 p-[20px]">Job Client Add</td>
               <td className="px-4 py-2 p-[20px]">TSC</td>
               <td className="px-4 py-2 p-[20px]">Asset 1</td>
-              <td className="px-4 py-2 p-[20px]"></td>
-              <td className="px-4 py-2 p-[20px]">28 Days</td>
+              <td className="px-4 py-2 p-[20px]">Event - 25th Aug</td>
+              <td className="px-4 py-2 p-[20px]">268 Days</td>
               <td className="px-4 py-2 flex gap-2 mt-[10px]">
                 <span className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center font-bold ">
-                  AJ
+                  U
                 </span>
-                <span className="w-8 h-8 bg-black rounded-full flex items-center justify-center font-bold p-[17px] text-white">
-                  AK
-                </span>
+               
               </td>
 
               <td className="px-4 py-2 flex gap-2 ">
+               
                 <span className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center font-bold ">
-                  SJ
-                </span>
-                <span className="w-8 h-8 bg-black rounded-full flex items-center justify-center font-bold p-[17px] text-white">
-                  AJ
+                  U
                 </span>
               </td>
               <td className="">
@@ -740,12 +730,12 @@ function Support() {
               <td className="px-4 py-2 p-[20px]">10009</td>
               <td className="px-4 py-2 p-[20px]">Sterling Infotech</td>
               <td className="px-4 py-2 p-[20px]">Sterling</td>
-              <td className="px-4 py-2 p-[20px]">Testing1</td>
-              <td className="px-4 py-2 p-[20px]"></td>
+              <td className="px-4 py-2 p-[20px]">Test</td>
               <td className="px-4 py-2 p-[20px]">Event - 25th Aug</td>
+              <td className="px-4 py-2 p-[20px]">287 Days</td>
               <td className="px-4 py-2 flex gap-2 mt-[5px]">
-                <span className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center font-bold p-[20px]">
-                  AJ
+               <span className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center font-bold ">
+                  U
                 </span>
               </td>
               <td className="px-4 py-2">
@@ -763,7 +753,7 @@ function Support() {
                   <LuPencil />
                 </button>
                 <br />
-                <Link to="/SupportTicket">
+                <Link to="/SupportTicketNext">
                   <button className="p-[5px] mt-1 border rounded hover:bg-gray-100 cursor-pointer">
                     <FiArrowRight />
                   </button>

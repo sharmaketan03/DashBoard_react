@@ -14,7 +14,7 @@ const ToInvoice = () => {
         <h1 className="text-2xl font-bold mb-4">To Invoice</h1>
       </div>
         <div>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm flex items-center gap-2">
+          <button className="bg-sky-500 hover:bg-sky-600 rounded flex items-center gap-1 text-white px-4 py-2 mt-5 font-medium text-xs">
           <svg
             className="w-4 h-4"
             fill="none"
@@ -51,7 +51,7 @@ const ToInvoice = () => {
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead className="bg-sky-100 text-black font-medium">
-              <tr>
+              <tr className="bg-sky-100 text-[#254a9c]">
                 <th className="px-4 py-2">Ticket No.</th>
                 <th className="px-4 py-2">Client Name</th>
                 <th className="px-4 py-2">Client Site</th>

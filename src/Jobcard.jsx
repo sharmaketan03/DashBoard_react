@@ -70,7 +70,7 @@ const Jobcard = () => {
             <div className="flex justify-between items-center border-b pb-2 mb-5">
               <h2 className="text-xl font-bold">Add Client</h2>
               <button
-                className="text-gray-900 text-[30px] hover:text-gray-700"
+                className="text-gray-900 text-[45px] hover:text-gray-700"
                 onClick={closeModal}
               >
                 &times;
@@ -142,7 +142,7 @@ const Jobcard = () => {
             <div className="flex justify-between items-center border-b pb-2 mb-5">
               <h2 className="text-xl font-bold">Add Asset</h2>
               <button
-                className="text-gray-900 text-[30px] hover:text-gray-700"
+                className="text-gray-900 text-[45px] hover:text-gray-700"
                 onClick={closeClick}
               >
                 &times;
@@ -229,7 +229,7 @@ const Jobcard = () => {
             <div className="flex justify-between items-center border-b pb-2 mb-5">
               <h2 className="text-xl font-bold">Create Recurring Job Card</h2>
               <button
-                className="text-gray-900 text-[30px] hover:text-gray-700"
+                className="text-gray-900 text-[45px] hover:text-gray-700"
                 onClick={closeShow}
               >
                 &times;
@@ -316,7 +316,7 @@ const Jobcard = () => {
             <div className="flex justify-between items-center border-b pb-2 mb-5">
               <h2 className="text-xl font-bold">Add Job Card</h2>
               <button
-                className="text-gray-900 text-[30px] hover:text-gray-700"
+                className="text-gray-900 text-[45px] hover:text-gray-700"
                 onClick={closeDiv}
               >
                 &times;
@@ -458,7 +458,7 @@ const Jobcard = () => {
         {activeTab === "active" && (
           <div className="overflow-x-auto mt-12">
             <table className="w-full text-sm text-left border-collapse">
-              <thead className="bg-blue-100 text-gray-800 font-semibold rounded-[5px]">
+              <thead className="bg-sky-100 text-[#254a9c] font-semibold rounded-[5px]">
                 <tr>
                   <th className="p-3">Ticket No</th>
                   <th className="p-3">Client</th>
@@ -472,7 +472,7 @@ const Jobcard = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b">
+                <tr className="border-b border-gray-400">
                   <td className="p-3">30000</td>
                   <td className="p-3">
                     <div>Sterling</div>

@@ -14,7 +14,7 @@ const Dashboard = () => {
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm text-left border-collapse">
                 <thead>
-                  <tr className="bg-sky-100 text-gray-700 ">
+                  <tr className="bg-sky-100 text-[#254a9c] ">
                     <th className="px-4 py-3 font-semibold">Ticket No.</th>
                     <th className="px-4 py-3 font-semibold">Client Name</th>
                     <th className="px-4 py-3 font-semibold">Client Site</th>
@@ -41,7 +41,7 @@ const Dashboard = () => {
                     </td>
                     <td className="pt-[20px]">
                       <Link to="/DashboardonsitePageFirst">
-                        <button className="bg-[#629C44] w-[120px] leading-8 text-white px-7  rounded-md text-xs block text-center">
+                        <button className="bg-[#629C44] w-[125px]   text-white   rounded-md text-8   block text-center">
                           On-site Technician
                         </button>
                       </Link>
@@ -69,7 +69,7 @@ const Dashboard = () => {
                     </td>
                     <td className="pt-[20px]">
                        <Link to="/DashboardOnsiteTechnincSecond">
-                        <button className="bg-[#629C44] w-[120px] leading-8 text-white px-7  rounded-md text-xs block text-center">
+                        <button className="bg-[#629C44] w-[126px]   text-white  p-1.5  rounded-md text-11   block text-center">
                           On-site Technician
                         </button>
                       </Link>

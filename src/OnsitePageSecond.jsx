@@ -9,6 +9,8 @@ import { FiPhone, FiMail, FiMessageSquare } from "react-icons/fi";
 import { FiArrowRight } from "react-icons/fi";
 import { FiChevronDown } from "react-icons/fi";
 import { LuUpload } from "react-icons/lu";
+import { BiSolidRightArrow } from "react-icons/bi";
+import { FiArchive, FiClipboard } from "react-icons/fi";
 
 function DashboardonsitePageSecond() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,25 +34,43 @@ function DashboardonsitePageSecond() {
           Created: September 24, 2024 : 02:48pm Claimed by: Clark Kelly, Shankey Jn, , <span className="text-blue-500">Edit</span>
           </p>
         </div>
-        <div className="flex space-x-2">
-          <a variant="outline">Archive</a>
-          <a variant="outline">Ticket Log</a>
-        </div>
+        <div className="flex gap-4">
+                 <button className="flex items-center gap-2 px-4 py-2 border border-gray-400 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                   <FiArchive />
+                   Archive
+                 </button>
+                 <button className="flex items-center gap-2 px-4 py-2 border border-gray-400 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                   <FiClipboard />
+                   Ticket Log
+                 </button>
+               </div>
       </div>
 
-      <div className="flex mb-6">
-        <div className="flex-1 text-center bg-gray-200 p-2 rounded-l">Open</div>
-        <div className="flex-1 text-center bg-gray-300 p-2">Working</div>
-        <div className="flex-1 text-center bg-orange-400 p-2 text-white">
-          Onsite Technician
-        </div>
-        <div
-          className="flex-1 text-center bg-gray-200 p-2 rounded-r cursor-pointer hover:bg-gray-300 transition"
-          onClick={() => setIsModalOpen(true)}
-        >
-          Resolved
-        </div>
-      </div>
+     
+
+       <div className="flex relative w-[100%] mb-6 p-1 justify-between items-center">
+              <div
+                className="flex-1 py-2.5 px-4  bg-gray-200 text-gray-900 rounded-l-lg text-center font-semibold"
+              >
+                Open
+              </div>
+              <BiSolidRightArrow className="absolute left-[269px] text-gray-200 text-5xl"/>
+              <div
+                className="flex-1 py-2.5 px-4 bg-gray-400 text-gray-900 text-center"
+              >
+                Working
+              </div>
+               <BiSolidRightArrow className="absolute left-[545px] text-gray-400 text-5xl"/>
+              <div
+                className="flex-1 py-2.5 px-4 bg-amber-600 text-white text-center"
+              >
+                On-site Technician
+              </div>
+               <BiSolidRightArrow className="absolute left-[820px] text-amber-600 text-5xl"/>
+              <button className="flex-1 py-2.5 px-4 bg-gray-400 text-gray-900 rounded-r-lg text-center" onClick={() => setIsModalOpen(true)}>
+                Resolved
+              </button>
+            </div>
 
       <div className="grid grid-cols-2 gap-6">
         <div className="max-w-3xl mx-auto p-6 w-[100%] h-[97%]  border border-gray-300 rounded-xl space-y-6">
