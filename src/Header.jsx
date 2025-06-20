@@ -2,8 +2,19 @@ import React from "react";
 import Logo from "./assets/logo.svg";
 import { IoIosSearch } from "react-icons/io";
 import { MdLogout } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { auth } from "./Firebase";
+import { signOut } from "firebase/auth";
+
 
 const Header = () => {
+
+    const navigate=useNavigate()
+  async function handel(){
+        await auth.signOut();  
+        navigate("/")
+        console.log("User Logout Successfully!") 
+  }
   return (
     <header className="bg-[#272d34] fixed top-0 left-0 w-full z-50 px-4 py-2">
       <div className=" mx-auto flex items-center justify-between">
@@ -26,7 +37,7 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-4 text-white">
           <h3 className="text-sm font-medium">Welcome back, Clark Kelly!</h3>
           <button className="flex items-center gap-1 hover:text-gray-300">
-            <span className="text-sm">Logout</span>
+            <span className="text-sm" onClick={handel}>Logout</span>
             <MdLogout className="text-lg" />
           </button>
         </div>

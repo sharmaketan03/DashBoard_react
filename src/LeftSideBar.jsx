@@ -27,13 +27,13 @@ const LeftSideBar = () => {
         <div className="w-[280px] text-gray-700 min-h-screen shadow-md">
           <ul className="pt-6 space-y-1 px-4 text-sm">
             <li>
-              <NavLink to="/" className={linkClasses}>
+              <NavLink to="/App" className={linkClasses}>
                 <RxDashboard className="text-lg" /> Dashboard
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/support" className={({ isActive }) =>
+              <NavLink to="/App/support" className={({ isActive }) =>
                 `flex items-center justify-between px-[20px] py-[10px] rounded-md text-[12px] font-medium ${
                   isActive
                     ? "bg-sky-100 text-sky-600"
@@ -50,31 +50,31 @@ const LeftSideBar = () => {
             </li>
 
             <li>
-              <NavLink to="/jobcard" className={linkClasses}>
+              <NavLink to="/App/jobcard" className={linkClasses}>
                 <TbShoppingBag className="text-lg" /> Job Cards
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/clients" className={linkClasses}>
+              <NavLink to="/App/clients" className={linkClasses}>
                 <CiFaceSmile className="text-lg" /> Clients
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Assets" className={linkClasses}>
+              <NavLink to="/App/Assets" className={linkClasses}>
                 <CiFolderOn className="text-lg" /> Assets
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Contact" className={linkClasses}>
+              <NavLink to="/App/Contact" className={linkClasses}>
                 <LuPhone className="text-lg" /> Contacts
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/technicians" className={({ isActive }) =>
+              <NavLink to="/App/technicians" className={({ isActive }) =>
                 `flex items-center justify-between px-[20px] py-[10px] rounded-md text-[12px] font-medium ${
                   isActive
                     ? "bg-sky-100 text-sky-600"
@@ -91,7 +91,7 @@ const LeftSideBar = () => {
             </li>
 
             <li>
-              <NavLink to="/ToInvoice" className={({ isActive }) =>
+              <NavLink to="/App/ToInvoice" className={({ isActive }) =>
                 `flex items-center justify-between px-[20px] py-[10px] rounded-md text-[12px] font-medium ${
                   isActive
                     ? "bg-sky-100 text-sky-600"
@@ -108,25 +108,25 @@ const LeftSideBar = () => {
             </li>
 
             <li>
-              <NavLink to="/Resoursec" className={linkClasses}>
+              <NavLink to="/App/Resoursec" className={linkClasses}>
                 <CiFolderOn className="text-lg" /> Resources
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Archive" className={linkClasses}>
+              <NavLink to="/App/Archive" className={linkClasses}>
                 <FiArchive className="text-lg" /> Archive
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Setting" className={linkClasses}>
+              <NavLink to="/App/Setting" className={linkClasses}>
                 <IoSettingsOutline className="text-lg" /> Settings
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/users" className={linkClasses}>
+              <NavLink to="/App/users" className={linkClasses}>
                 <AiOutlineUser className="text-lg" /> Users
               </NavLink>
             </li>

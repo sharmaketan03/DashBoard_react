@@ -30,120 +30,137 @@ import Google from "./Google"
 import AssetDetails1 from "./AssetDetails1"
 import AssetsCPUComponent from "./AssetsCPUComponent"
 import SupportTicketNext from "./SupportsTicketsnext"
-
+import Login from "./Login"
+import Register from "./Register"
+import ProtecterRouter from "./ProtecterRouter"
+// import MainComponent from "./MainComponent"
 
 const router = createBrowserRouter([
-  {
+  {  
     path:"/",
-    element:<First/>,
+    element:<Login/>
+
+  },
+  {
+    path:"/register",
+    element:<Register/>
+  },
+ 
+ 
+ 
+  {
+    path:"/App",
+    element: <ProtecterRouter> 
+      <First/>
+    </ProtecterRouter>,
     children:[
       {
      index:true,
      element:<Dashboard/>
       },
       {
-     path:"/contact",
+     path:"/App/contact", 
      element:<ContactComponent/>
       },
       {
-     path:"/assets",
+     path:"/App/assets",
      element:<AssestComponent/>
       },
       {
-     path:"/resoursec",
+     path:"/App/resoursec",
      element:<Resoursec/>
       },
       {
-     path:"/setting",
+     path:"/App/setting",
      element:<Setting/>
       },
       {
-     path:"/support",
+     path:"/App/support",
      element:<Support/>
       },
       {
-     path:"/archive",
+     path:"/App/archive",
      element:<Archive/>
       },
       {
-     path:"/jobcard",
+     path:"/App/jobcard",
      element:<Jobcard/>
       },
       {
-     path:"/Technicians",
+     path:"/App/Technicians",
      element:<Technicians/>
       },
        {
-     path:"/ToInvoice",
+     path:"/App/ToInvoice",
      element:<ToInvoice/>
       },
       {
-     path:"/clients",
+     path:"/App/clients",
      element:<Clients/>
       },
       {
-     path:"/users",
+     path:"/App/users",
      element:<Users/>
       },
       {
-      path:"/supportTicket",
+      path:"/App/supportTicket",
       element:<SupportTicket/>
       },
       {
-      path:"/DashboardWorking",
+      path:"/App/DashboardWorking",
       element:<DashboardWorking/>
       },
         {
-      path:"/DashboardOpen",
+      path:"/App/DashboardOpen",
       element:<DashboardOpen/>
       },
 
         {
-      path:"/DashboardOnsiteTechnincSecond",
+      path:"/App/DashboardOnsiteTechnincSecond",
       element:<DashboardOnsiteTechnincFirst/>
       },
 
         {
-      path:"/DashboardonsitePageFirst",
+      path:"/App/DashboardonsitePageFirst",
       element:<DashboardonsitePageSecond/>
       },
          {
-      path:"/JobCardNext",
+      path:"/App/JobCardNext",
       element:<JobCardNext/>
       },
       
           {
-      path:"/SiteOverview",
+      path:"/App/SiteOverview",
       element:<SiteOverview/>
       },
 
           {
-      path:"/StrelingInfotech",
+      path:"/App/StrelingInfotech",
       element:<StrelingInfotech/>
       },
           {
-      path:"/Clientstest",
+      path:"/App/Clientstest",
       element:<Clientstest/>
       },
            {
-      path:"/JobClientAdd",
+      path:"/App/JobClientAdd",
       element:<JobClientAdd/>
       },
             {
-      path:"/Google",
+      path:"/App/Google",
       element:<Google/>
       },
              {
-      path:"/AssetDetails1",
+      path:"/App/AssetDetails1",
       element:<AssetDetails1/>
       },
 
                {
-      path:"/AssetsCPUComponent",
+      path:"/App/AssetsCPUComponent",
       element:<AssetsCPUComponent/>
       },
                  {
-      path:"/SupportTicketNext",
+      path:"/App/ SupportTicketNext",
       element:<SupportTicketNext/>
       },
       

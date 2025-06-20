@@ -22,7 +22,7 @@ function DashboardonsitePageSecond() {
         <div>
           <div className="flex items-center gap-3">
             <div>
-              <Link to="/">
+              <Link to="/App">
                 <HiOutlineArrowLeft className="text-xl text-gray-500 cursor-pointer border-[2px] h-[25px] w-[25px] rounded-full" />
               </Link>
             </div>
@@ -54,19 +54,19 @@ function DashboardonsitePageSecond() {
               >
                 Open
               </div>
-              <BiSolidRightArrow className="absolute left-[269px] text-gray-200 text-5xl"/>
+              <BiSolidRightArrow className="absolute left-[240px] text-gray-200 text-5xl"/>
               <div
                 className="flex-1 py-2.5 px-4 bg-gray-400 text-gray-900 text-center"
               >
                 Working
               </div>
-               <BiSolidRightArrow className="absolute left-[545px] text-gray-400 text-5xl"/>
+               <BiSolidRightArrow className="absolute left-[490px] text-gray-400 text-5xl"/>
               <div
                 className="flex-1 py-2.5 px-4 bg-amber-600 text-white text-center"
               >
                 On-site Technician
               </div>
-               <BiSolidRightArrow className="absolute left-[820px] text-amber-600 text-5xl"/>
+               <BiSolidRightArrow className="absolute left-[737px] text-amber-600 text-5xl"/>
               <button className="flex-1 py-2.5 px-4 bg-gray-400 text-gray-900 rounded-r-lg text-center" onClick={() => setIsModalOpen(true)}>
                 Resolved
               </button>
@@ -363,5 +363,5 @@ function DashboardonsitePageSecond() {
     </div>
   );
 }
-
+  
 export default DashboardonsitePageSecond;
